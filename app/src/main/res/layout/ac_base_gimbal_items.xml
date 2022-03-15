@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:background="@drawable/text_background"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/setGimbalWorkMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="setGimbalWorkMode"
+            android:textAllCaps="false" />
+
+        <Spinner
+            android:id="@+id/gimbalWorkModeList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/getGimbalWorkMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:text="getGimbalWorkMode"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/getGimbalDialAdjustSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:text="getGimbalDialAdjustSpeed"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/getVersionInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:text="getVersionInfo"
+        android:textAllCaps="false" />
+</LinearLayout>

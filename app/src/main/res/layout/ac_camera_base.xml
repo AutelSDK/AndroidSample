@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".RemoteControllerActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_background"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:visibility="gone"
+            android:text="setConnectStateListener" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/setCameraConnectStateListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="set" />
+
+            <Button
+                android:id="@+id/resetCameraConnectStateListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="reset" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:background="@drawable/text_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="setSDCardStateListener" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/setCameraSDCardStateListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="set" />
+
+            <Button
+                android:id="@+id/resetCameraSDCardStateListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="reset" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_background"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="setMediaStateListener" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/setCameraMediaStateListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="set" />
+
+            <Button
+                android:id="@+id/resetCameraMediaStateListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="reset" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/formatSDCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="formatSDCard" />
+    <Button
+        android:id="@+id/formatMMCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="formatMMCard" />
+
+    <Button
+        android:id="@+id/resetCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="resetDefaults" />
+
+
+    <Button
+        android:id="@+id/getWorkStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="getWorkStatus" />
+
+
+    <Button
+        android:id="@+id/getSDCardStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="getSDCardStatus" />
+
+
+    <Button
+        android:id="@+id/getSdFreeSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="getSDCardFreeSpace" />
+
+
+    <Button
+        android:id="@+id/getProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="getProduct" />
+
+    <Button
+        android:id="@+id/getTimeStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="getTimeStamp"
+        android:visibility="gone"
+        />
+
+
+    <Button
+        android:id="@+id/getVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="getVersion" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:background="@drawable/text_background"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/setMediaMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:text="setMediaMode" />
+        <Spinner
+            android:id="@+id/mediaModeList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:entries="@array/camera_media_modes"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/getMediaMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="getMediaMode" />
+
+    <Button
+        android:id="@+id/takePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="startTakePhoto" />
+
+    <Button
+        android:id="@+id/stopTimelapse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="stopTakePhoto(Timelapse)" />
+
+    <Button
+        android:id="@+id/startRecordVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="startRecordVideo" />
+
+    <Button
+        android:id="@+id/stopRecordVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="stopRecordVideo" />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_background"
+        android:gravity="center"
+        android:padding="@dimen/text_padding"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:text="-------$$$$$ base camera end $$$$$------" />
+</LinearLayout>

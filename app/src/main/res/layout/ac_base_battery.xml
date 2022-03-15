@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20px">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:background="@drawable/text_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lowBatteryRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/setLowBatteryNotifyThreshold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setLowBatteryNotifyThreshold"
+                android:textAllCaps="false" />
+
+            <EditText
+                android:id="@+id/lowBatteryNotifyThreshold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="low battery notify"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/getLowBatteryNotifyThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:padding="@dimen/text_padding"
+        android:text="getLowBatteryNotifyThreshold"
+        android:textAllCaps="false" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:background="@drawable/text_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/criticalBatteryRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/setCriticalBatteryNotifyThreshold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCriticalBatteryNotifyThreshold"
+                android:textAllCaps="false" />
+
+            <EditText
+                android:id="@+id/criticalBatteryNotifyThreshold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="critical battery notify"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/getCriticalBatteryNotifyThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:padding="@dimen/text_padding"
+        android:text="getCriticalBatteryNotifyThreshold"
+        android:textAllCaps="false" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:background="@drawable/text_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dischargeDayRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/setDischargeDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setDischargeDay"
+                android:textAllCaps="false" />
+
+            <EditText
+                android:id="@+id/dischargeDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="discharge day"
+                android:inputType="number" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/getDischargeDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:padding="@dimen/text_padding"
+        android:text="getDischargeDay"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/getDischargeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:padding="@dimen/text_padding"
+        android:text="getDischargeCount"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/getSerialNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:padding="@dimen/text_padding"
+        android:text="getSerialNumber"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/getVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:padding="@dimen/text_padding"
+        android:text="getVersion"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/getFullChargeCapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:padding="@dimen/text_padding"
+        android:text="getFullChargeCapacity"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/getCellVoltageRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:padding="@dimen/text_padding"
+        android:text="getCellVoltageRange"
+        android:textAllCaps="false" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:background="@drawable/text_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="setBatteryStateListener" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/setBatteryRealTimeDataListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="set" />
+
+            <Button
+                android:id="@+id/resetBatteryRealTimeDataListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="reset" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>
+
+

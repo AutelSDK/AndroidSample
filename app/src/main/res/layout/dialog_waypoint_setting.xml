@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_waypoint_setting"
+        android:layout_width="450dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@android:drawable/dialog_holo_light_frame">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mission_waypoint"
+            android:textColor="@android:color/black"
+            android:id="@+id/fly_point_setting_title"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_waypoint_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="1"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="20sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="45dp"
+            android:background="@android:color/darker_gray" />
+
+
+        <TextView
+            android:id="@+id/height_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:text="@string/mission_alititude"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/fly_point_height_limit_tv"
+            android:layout_toRightOf="@+id/height_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="(0-100M)"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:layout_toRightOf="@+id/fly_point_height_limit_tv"
+            android:id="@+id/edit_waypoint_height"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:layout_alignBaseline="@id/fly_point_height_limit_tv"
+            android:maxLength="3"
+            android:digits="1234567890"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="150dp"
+            android:text="@string/mission_hover_time"
+            android:textColor="@android:color/black"
+            android:id="@+id/hover_time_title_tv"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:layout_toRightOf="@+id/hover_time_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="(0-60s)"
+            android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_marginTop="180dp"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <SeekBar
+            android:id="@+id/seekbar_waypoint_delay_time"
+            style="@android:style/Widget.Holo.SeekBar"
+            android:max="60"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/text_waypoint_delay_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/holo_blue_light"
+            android:text="0s"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="230dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="450dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="230dp">
+
+            <TextView
+                android:id="@+id/dialog_waypoint_setting_cancel"
+                android:layout_width="225dp"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:text="@string/mission_cancel"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="2px"
+                android:layout_height="70dp"
+                android:layout_marginLeft="225dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/text_waypoint_ok"
+                android:layout_width="225dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="225dp"
+                android:gravity="center"
+                android:text="@string/mission_yes"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

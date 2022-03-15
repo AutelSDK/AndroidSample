@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20px">
+
+        <LinearLayout
+            android:id="@+id/scanRFLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getRFDataList" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/getRFListStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Start" />
+
+                <Button
+                    android:id="@+id/getRFListCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/getCurrentRFLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin_top"
+            android:background="@drawable/text_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCurrentRFData" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/getCurrentRFStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Start" />
+
+                <Button
+                    android:id="@+id/getCurrentRFCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/setCurrentRFLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin_top"
+            android:background="@drawable/text_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="setCurrentRFData" />
+
+                <Spinner
+                    android:id="@+id/dspRFList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="select a rf hz" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/setCurrentRFAStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Start" />
+
+                <Button
+                    android:id="@+id/setCurrentRFACancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/updateSSIDLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin_top"
+            android:background="@drawable/text_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/SSIDName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="SSID name" />
+
+                <EditText
+                    android:id="@+id/SSIDPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:hint="SSID password" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/updateNewSSIDInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="updateNewSSIDInfo"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/getCurrentSSIDInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin_top"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="getCurrentSSIDInfo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/getVersionInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin_top"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="getVersionInfo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/resetWifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin_top"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="resetWifi"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</ScrollView>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.autel.sdksample.evo.mission.widge.AutelSegmentedGroup
+        android:id="@+id/orbit_rb"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/mission_drop_item_height"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/mission_margin_24dp"
+        android:layout_marginRight="@dimen/mission_margin_24dp"
+        android:layout_marginTop="@dimen/orbit_margin_16dp"
+        android:orientation="horizontal"
+        segmentedgroup:layout_constraintLeft_toLeftOf="parent"
+        segmentedgroup:layout_constraintRight_toRightOf="parent"
+        segmentedgroup:layout_constraintTop_toTopOf="parent"
+        segmentedgroup:sc_border_width="1dp"
+        segmentedgroup:sc_checked_text_color="@color/white"
+        segmentedgroup:sc_corner_radius="10dp"
+        segmentedgroup:sc_tint_color="@color/bg_blue">
+
+        <com.autel.sdksample.evo.mission.widge.AutelRadioButton
+            android:id="@+id/rb_left_btn"
+            style="@style/RadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mission_basic"
+            android:textSize="@dimen/text_view_size_sp_14" />
+
+        <com.autel.sdksample.evo.mission.widge.AutelRadioButton
+            android:id="@+id/rb_right_btn"
+            style="@style/RadioButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mission_advanced"
+            android:textSize="@dimen/text_view_size_sp_14" />
+    </com.autel.sdksample.evo.mission.widge.AutelSegmentedGroup>
+
+    <FrameLayout
+        android:id="@+id/orbit_execute_remote_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="@dimen/margin_19dp"
+        segmentedgroup:layout_constraintBottom_toBottomOf="parent"
+        segmentedgroup:layout_constraintHorizontal_bias="0.0"
+        segmentedgroup:layout_constraintLeft_toLeftOf="parent"
+        segmentedgroup:layout_constraintRight_toRightOf="parent"
+        segmentedgroup:layout_constraintTop_toBottomOf="@+id/orbit_rb">
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

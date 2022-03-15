@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_live_push_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="start push"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:textAllCaps="false"
+        android:onClick="startLivePush"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_live_push_stop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_live_push_start"
+        android:text="stop push"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:textAllCaps="false"
+        android:onClick="stopLivePush"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_message1"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        tools:text="安保处"
+        android:textSize="@dimen/text_view_size_sp_16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_message2"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_message1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
+        tools:text="安保处"
+        android:textSize="@dimen/text_view_size_sp_16"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_message3"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_message2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
+        tools:text="安保处"
+        android:textSize="@dimen/text_view_size_sp_16"
+        android:layout_marginTop="@dimen/common_10dp"
+        android:layout_height="wrap_content"/>
+</android.support.constraint.ConstraintLayout>

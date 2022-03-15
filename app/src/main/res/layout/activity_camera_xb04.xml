@@ -1,0 +1,1394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".RCActivity">
+
+    <TextView
+        android:id="@+id/camera_log_output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingLeft="5dp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20px">
+
+            <include
+                android:id="@+id/basecameraLayout"
+                layout="@layout/ac_camera_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/getPhotoExposureMode"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getPhotoExposureMode" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="setExposureMode" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/setCameraGearAuto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="AUTO" />
+
+                    <TextView
+                        android:id="@+id/setCameraGearManual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="MANUAL" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/getCameraAutoExposureState"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraAutoExposureState" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="setCameraAutoExposureState" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/setCameraAutoExposureStateLocked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="LOCK" />
+
+                    <TextView
+                        android:id="@+id/setCameraAutoExposureStateUnlocked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="UNLOCK" />
+
+                    <TextView
+                        android:id="@+id/setCameraAutoExposureStateDisable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="DISABLE" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/getSpotMeteringArea"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getSpotMeteringArea" />
+
+            <TextView
+                android:id="@+id/setCameraSpotMeter"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setSpotMeteringArea" />
+
+            <TextView
+                android:id="@+id/getExposureValue"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getExposureValue" />
+
+            <TextView
+                android:id="@+id/setExposureValue"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setExposureValue" />
+
+            <TextView
+                android:id="@+id/getCameraISO"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraISO" />
+
+            <TextView
+                android:id="@+id/setCameraISO"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraISO" />
+
+            <TextView
+                android:id="@+id/getCameraIRIS"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraIRIS" />
+
+            <TextView
+                android:id="@+id/setCameraIRIS"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraIRIS" />
+
+            <TextView
+                android:id="@+id/getCameraShutter"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraShutter" />
+
+            <TextView
+                android:id="@+id/setCameraShutter"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraShutter" />
+
+            <TextView
+                android:id="@+id/getCameraAspectRatio"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraAspectRatio" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraAspectRatio" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCameraAspectRatioAspect_16_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Aspect_16_9" />
+
+                <TextView
+                    android:id="@+id/setCameraAspectRatioAspect_4_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Aspect_4_3" />
+
+                <TextView
+                    android:id="@+id/setCameraAspectRatioAspect_3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Aspect_3_2" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/getCameraPhotoFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraPhotoFormat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraPhotoFormat" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCameraPhotoFormatRAW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="RAW" />
+
+                <TextView
+                    android:id="@+id/setCameraPhotoFormatRawAndJPEG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="RawAndJPEG" />
+
+                <TextView
+                    android:id="@+id/setCameraPhotoFormatJPEG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="JPEG" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/getCameraWhiteBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraWhiteBalance" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraWhiteBalance" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCameraWhiteBalanceFluor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Fluor" />
+
+                <TextView
+                    android:id="@+id/setCameraWhiteBalanceIncan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Incan" />
+
+                <TextView
+                    android:id="@+id/setCameraWhiteBalanceAuto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Auto" />
+
+                <TextView
+                    android:id="@+id/setCameraWhiteBalanceSunny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Sunny" />
+
+                <TextView
+                    android:id="@+id/setCameraWhiteBalanceCloudy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Cloudy" />
+
+                <TextView
+                    android:id="@+id/setCameraWhiteBalanceCustom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Custom" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/setCameraCustomWhiteBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraCustomWhiteBalance" />
+
+            <TextView
+                android:id="@+id/getCameraColor"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraColor" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/item_margin_bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/setCameraColorNone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="None" />
+
+                    <TextView
+                        android:id="@+id/setCameraColorVivid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="Vivid" />
+
+                    <TextView
+                        android:id="@+id/setCameraColorBlackAndWhite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="BlackAndWhite" />
+
+                    <TextView
+                        android:id="@+id/setCameraColorArt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="Art" />
+
+                    <TextView
+                        android:id="@+id/setCameraColorFilm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="Film" />
+
+                    <TextView
+                        android:id="@+id/setCameraColorBeach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="Beach" />
+
+                    <TextView
+                        android:id="@+id/setCameraColorDream"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="Dream" />
+
+                    <TextView
+                        android:id="@+id/setCameraColorClassic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="Classic" />
+
+                    <TextView
+                        android:id="@+id/setCameraColorLog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="Log" />
+
+                    <TextView
+                        android:id="@+id/setCameraColorNostalgic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="Nostalgic" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/getVideoStandard"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getVideoStandard" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setVideoStandard" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCameraVideoStandardNTSC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="NTSC" />
+
+                <TextView
+                    android:id="@+id/setCameraVideoStandardPAL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="PAL" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/getVideoResolutionAndFps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getVideoResolutionAndFps" />
+
+            <TextView
+                android:id="@+id/setVideoResolutionAndFrameRate"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setVideoResolutionAndFps" />
+
+            <TextView
+                android:id="@+id/isCameraVideoSubtitleEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="isCameraVideoSubtitleEnable" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraVideoSubtitleEnable" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCameraVideoSubtitleEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Enable" />
+
+                <TextView
+                    android:id="@+id/setCameraVideoSubtitleDisable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Disable" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/isCamera3DDenoiseEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="isCamera3DDenoiseEnable" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCamera3DDenoiseEnable" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCamera3DDenoiseEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Enable" />
+
+                <TextView
+                    android:id="@+id/setCamera3DDenoiseDisable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Disable" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/getCameraAntiFlicker"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraAntiFlicker" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraAntiFlicker" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCameraAntiFlickerAUTO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="AUTO" />
+
+                <TextView
+                    android:id="@+id/setCameraAntiFlicker50HZ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="50HZ" />
+
+                <TextView
+                    android:id="@+id/setCameraAntiFlicker60HZ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="60HZ" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/getCameraPhotoStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraPhotoStyle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraPhotoStyle" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCameraPhotoStyleStandard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Standard" />
+
+                <TextView
+                    android:id="@+id/setCameraPhotoStyleSoft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Soft" />
+
+                <TextView
+                    android:id="@+id/setCameraPhotoStyleLandscape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Landscape" />
+
+                <TextView
+                    android:id="@+id/setCameraPhotoStyleCustom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="Custom" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/setCameraCustomPhotoStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraCustomPhotoStyle" />
+
+            <TextView
+                android:id="@+id/getCameraBurstPhotoNum"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraBurstPhotoNum" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraBurstPhotoNum" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCameraBurstPhotoNum3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="burst3" />
+
+                <TextView
+                    android:id="@+id/setCameraBurstPhotoNum5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="burst5" />
+
+                <TextView
+                    android:id="@+id/setCameraBurstPhotoNum7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="burst7" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/getCameraTimelapseIntervalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraTimelapseIntervalTime" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraTimelapseIntervalTime" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCameraTimelapseIntervalTime5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="5" />
+
+                <TextView
+                    android:id="@+id/setCameraTimelapseIntervalTime7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="7" />
+
+                <TextView
+                    android:id="@+id/setCameraTimelapseIntervalTime10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="10" />
+
+                <TextView
+                    android:id="@+id/setCameraTimelapseIntervalTime20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="20" />
+
+                <TextView
+                    android:id="@+id/setCameraTimelapseIntervalTime30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="30" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/getCameraAebNum"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraAebNum" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraAebNum" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCameraAebNum3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="CAPTURE_3" />
+
+                <TextView
+                    android:id="@+id/setCameraAebNum5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="CAPTURE_5" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/getCameraManualFocusModeDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraManualFocusModeDistance" />
+
+            <TextView
+                android:id="@+id/setCameraManualFocusModeDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraManualFocusModeDistance" />
+
+
+            <TextView
+                android:id="@+id/takePhotoWithFocus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="takePhotoWithFocus" />
+
+
+            <TextView
+                android:id="@+id/getCameraStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraStatus"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/getCameraSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraSetting"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/getCameraCurrentVideoRecordTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getCameraCurrentVideoRecordTime" />
+
+            <TextView
+                android:id="@+id/getCameraFocus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getFocusMode" />
+
+            <TextView
+                android:id="@+id/TextView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setFocusMode" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCameraFocusModeAUTO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="AUTO" />
+
+                <TextView
+                    android:id="@+id/setCameraFocusModeMANUAL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="MANUAL" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/TextView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraZoomFactor" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setCameraZoomFactor100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="factor100" />
+
+                <TextView
+                    android:id="@+id/setCameraZoomFactor200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="factor200" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/getDigitalZoomScale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getDigitalZoomScale" />
+
+            <TextView
+                android:id="@+id/getAutoExposureLockState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getAutoExposureLockState" />
+
+
+            <TextView
+                android:id="@+id/getVideoSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getVideoSum" />
+
+            <TextView
+                android:id="@+id/getPhotoSumCanTake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getPhotoSumCanTake" />
+
+            <TextView
+                android:id="@+id/isSubtitleSwitchEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="isSubtitleSwitchEnable" />
+
+
+            <TextView
+                android:id="@+id/getVideoFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getVideoFormat" />
+
+
+            <TextView
+                android:id="@+id/isHistogramStatusEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="isHistogramStatusEnable" />
+
+
+            <TextView
+                android:id="@+id/getColorStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getColorStyle" />
+
+            <TextView
+                android:id="@+id/getFocusDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getFocusDistance" />
+
+            <TextView
+                android:id="@+id/getColorTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getColorTemperature" />
+
+            <!--               set listener                        -->
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="setCameraUploadGoalAreaListener" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/setCameraUploadGoalAreaListener"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="set" />
+
+                    <TextView
+                        android:id="@+id/resetCameraUploadGoalAreaListener"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="reset" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/setCameraAutoFocusMeterInSpotMode"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setCameraAutoFocusMeterInSpotMode" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="setCameraAutoFocusStateListener" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/setCameraAutoFocusStateListener"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="set" />
+
+                    <TextView
+                        android:id="@+id/resetCameraAutoFocusStateListener"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="reset" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="setCameraHistogramListener" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/setCameraHistogramListener"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="set" />
+
+                    <TextView
+                        android:id="@+id/resetCameraHistogramListener"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="reset" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

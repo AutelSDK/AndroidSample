@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/btn_add"
+        android:layout_width="@dimen/btn_add_container_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:scaleType="center"
+        android:src="@mipmap/waypoint_add_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_delete"
+        android:layout_width="@dimen/btn_add_container_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:scaleType="center"
+        android:src="@mipmap/waypoint_delete_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_add"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:text="Start"
+        android:textColor="@color/orbit_advanced_para_text_color"
+        android:textSize="@dimen/text_view_size_sp_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_delete"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

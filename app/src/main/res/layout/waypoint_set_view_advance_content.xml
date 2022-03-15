@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/cur_waypoint_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:text="# 8/8 point"
+        android:textColor="@color/orbit_tip_text_color"
+        android:textSize="@dimen/text_view_size_sp_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_prev"
+        android:layout_width="@dimen/iv_waypoint_red_icon_width"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:src="@mipmap/waypoint_next_icon"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_last"
+        android:layout_width="@dimen/iv_waypoint_red_icon_width"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:src="@mipmap/waypoint_last_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/img_prev"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/img_prev"
+        app:layout_constraintTop_toTopOf="@+id/img_prev"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <FrameLayout
+        android:id="@+id/waypoint_advance_altitude_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_last"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <include layout="@layout/orbit_data_set_advance_seekbar_item" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/waypoint_advance_speed_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_advance_altitude_seekbar"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <include layout="@layout/orbit_data_set_advance_seekbar_item" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/waypoint_advance_heading_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_advance_speed_seekbar"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <include layout="@layout/orbit_data_set_advance_seekbar_item" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/waypoint_advanced_north"
+        android:textColor="@color/orbit_tip_text_color"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_advance_heading_seekbar" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/waypoint_advanced_east"
+        android:textColor="@color/orbit_tip_text_color"
+        app:layout_constraintEnd_toStartOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_advance_heading_seekbar" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/waypoint_advanced_west"
+        android:textColor="@color/orbit_tip_text_color"
+        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_advance_heading_seekbar" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/waypoint_advanced_south"
+        android:textColor="@color/orbit_tip_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/waypoint_advanced_longitude"
+        android:textColor="@color/orbit_tip_text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:text="@string/waypoint_advanced_latitude"
+        android:textColor="@color/orbit_tip_text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:text="TextView"
+        android:textColor="@color/orbit_tip_text_color"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:text="TextView"
+        android:textColor="@color/orbit_tip_text_color"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

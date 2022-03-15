@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20px">
+        <Button
+            android:id="@+id/getAccount"
+            android:text="getAccount"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:background="@drawable/text_background"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/setBeginnerModeState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setUseRTK" />
+
+            <Switch
+                android:id="@+id/setUseRTKSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textOff="@string/fc_beginner_off"
+                android:textOn="@string/fc_beginner_on" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/getUseRTK"
+            android:text="getUseRTK"
+            android:onClick="getUseRTK"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:background="@drawable/text_background"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="setRtkCoordinateSys"
+                android:text="setRtkCoordinateSys"
+                android:textAllCaps="false" />
+
+            <Spinner
+                android:id="@+id/fcCoordinateSys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:entries="@array/rtk_coordinate_type" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/getRtkCoordinateSys"
+            android:text="getRtkCoordinateSys"
+            android:onClick="getRtkCoordinateSys"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/getRtkRecvType"
+            android:text="getRtkRecvType"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:onClick="getRtkRecvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/setRtkInfoListener"
+            android:text="setRtkInfoListener"
+            android:textAllCaps="false"
+            android:onClick="setRtkInfoListener"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/setFequency"
+            android:text="setFequency"
+            android:textAllCaps="false"
+            android:onClick="setFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:background="@drawable/text_background"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/setBaseStationLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="setBaseStationLocation"
+                android:padding="@dimen/text_padding"
+                android:text="setBaseStationLocation"
+                android:textAllCaps="false" />
+
+            <EditText
+                android:id="@+id/lat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="latitude"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/lng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="longitude"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/alt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/Altitude"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/setBaseStationListener"
+            android:text="setBaseStationListener"
+            android:textAllCaps="false"
+            android:onClick="setBaseStationListener"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/setBaseStationLocationListener"
+            android:text="setBaseStationLocationListener"
+            android:textAllCaps="false"
+            android:onClick="setBaseStationLocationListener"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>
+
+

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="black">#ff000000</color>
+    <color name="black_10">#12000000</color>
+    <color name="black_20">#36000000</color>
+    <color name="black_25">#B0B0B0</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_50_alpha">#7F000000</color>
+    <color name="black_55_alpha">#8c000000</color>
+    <color name="black_60">#A0000000</color>
+    <color name="black_65_alpha">#A6000000</color>
+    <color name="black_70_alpha">#b2000000</color>
+    <color name="black_75_alpha">#C1000000</color>
+    <color name="black_80">#AA000000</color>
+    <color name="black_alpha_cc">#CC000000</color>
+    <color name="black_fe">#FE000000</color>
+    <color name="black_de">#FFdedee2</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="white">#ffffff</color>
+    <color name="white_40">#06FFFFFF</color>
+    <color name="white_50">#80ffffff</color>
+    <color name="white_75">#bfffffff</color>
+    <color name="white_15">#26ffffff</color>
+    <color name="white_90">#E6F2F2F2</color>
+    <color name="white_f5f5f7">#F5F5F7</color>
+    <color name="white_95">#f2ffffff</color>
+    <color name="blue_text">#157DFB</color>
+    <color name="blue">#0378ff</color>
+    <color name="blue_camera_second_setting_selected_bg">#2e8df7</color>
+    <color name="blue_camera_first_setting_selected_bg">#2e8df7</color>
+    <color name="blue_40">#40157DFB</color>
+    <color name="bg_blue">#157dfb</color>
+    <color name="bg_green_conn_guide">#00ce2c</color>
+    <color name="fly_warn_red">#FF2E2E</color>
+    <color name="green_light">#1dff42</color>
+    <color name="gray_60">#A0D8D8D8</color>
+    <color name="gray_7a">#7A7A7A</color>
+    <color name="gray_7d">#7d7d7d</color>
+    <color name="gray_b2">#ffb2b2b2</color>
+    <color name="gray_7f">#7f7f7f</color>
+    <color name="gray_efeff4">#efeff4</color>
+    <color name="gray_f7_alpha">#aaf7f7f9</color>
+    <color name="gray_d7_alpha">#ffd7d7d7</color>
+    <color name="color_yellow">#efab03</color>
+    <color name="transparent_white">#00FFFFFF</color>
+    <color name="marquee_status_gray">#555555</color>
+    <color name="color_gray_79">#797979</color>
+    <color name="color_gray_d1">#d1d1d1</color>
+    <color name="gray_white">#EFEFEF</color>
+    <color name="gray">#ff808080</color>
+    <color name="font6">#666666</color>
+    <color name="sliding_switch_default">#00ee00</color>
+    <color name="black_20_alpha">#33000000</color>
+    <color name="black_999">#999999</color>
+    <color name="c1c1c1">#c1c1c1</color>
+    <!-- album -->
+    <color name="white_gray">#f4f5f8</color>
+    <color name="black_10_alpha">#1A000000</color>
+    <color name="white_f2efee">#f2efee</color>
+    <!-- album -->
+    <!--Warn Bean-->
+    <color name="warn_bean_grey">#ff808080</color>
+    <color name="warn_bean_red">#ffFF0000</color>
+    <color name="warn_bean_orange">#ffff9C00</color>
+    <color name="warn_bean_green">#ff2fBC4D</color>
+
+    <color name="warn_toast_view_bg">#ee222222</color>
+    <color name="black_40">#66000000</color>
+    <color name="light_gray">#7d7d7d</color>
+
+    <!--Overall status-->
+    <color name="gray_ad">#adadad</color>
+    <color name="view_setting_divider_long_gray">#BEBEBE</color>
+    <color name="selfchecking_tip_green_press">#4017BB37</color>
+    <color name="selfchecking_tip_green">#17BB37</color>
+    <color name="selfchecking_tip_red_press">#40ff1200</color>
+    <color name="selfchecking_tip_red">#ff1200</color>
+    <color name="selfchecking_tip_orange">#e56700</color>
+    <color name="selfchecking_tip_orange_press">#40e56700</color>
+    <color name="selfchecking_tip_btn_bg_press">#00be2d</color>
+
+    <color name="connect_guide_radio_button_selected_color">#ff33b5e5</color>
+    <color name="connect_guide_radio_button_unselected_color">@android:color/transparent</color>
+    <color name="connect_guide_color_white_f2">#f2f2f2</color>
+    <color name="connection_guide_decs">#5f5f5f</color>
+    <color name="radio_button_selected_color">#ff33b5e5</color>
+    <color name="radio_button_unselected_color">@android:color/transparent</color>
+    <color name="nfz_color">#80FE1716</color>
+    <color name="nfz_limit_height_color">#4DFF8000</color>
+    <color name="orange">#ffff7e00</color>
+    <color name="red">#ffAA0000</color>
+    <color name="firmware_text_black">#424242</color>
+    <color name="gray_e1">#e1e1e1</color>
+    <color name="waypoint_distance_background">#e0FFFFFF</color>
+
+    <!--AUTOPILOT-->
+    <color name="mission_auto_pilot_help_tip_text">#7B7A7B</color>
+    <color name="mission_auto_pilot_help_item_select">#157dfb</color>
+    <color name="mission_auto_pilot_help_divider">#cfcfcf</color>
+    <color name="blue_black">#00008b</color>
+    <color name="black_bf">#BF000000</color>
+    <color name="blue_guide_used">#15a1f7</color>
+    <color name="blue_guide">#43e500</color>
+    <color name="black_80_alpha">#CC000000</color>
+    <color name="black_65">#A5000000</color>
+    <color name="gray_auto_pilot_divider_color">#26ffffff</color>
+    <color name="black_30">#4C000000</color>
+    <color name="red_auto_pilot_text">#ff1200</color>
+    <color name="gs_blue_90">#ee157DFB</color>
+    <!--CameraSetting-->
+    <color name="app_setting_item_remark_color">#22FFFFFF</color>
+    <color name="list_selector_blue">#80157dfb</color>
+    <color name="textcolor_camera_setting_item">#43e500</color>
+    <color name="black_70">#B2000000</color>
+
+    <!-- BubbleView -->
+    <color name="bubbleView_light_background">#CCFFFFFF</color>
+    <color name="bubbleView_dark_background">#CC000000</color>
+    <color name="bubbleView_light_text_color">#CC323C49</color>
+    <color name="bubbleView_dark_text_color">#CCFFFFFF</color>
+    <color name="bubbleView_light_press_background">#E6FFFFFF</color>
+    <color name="bubbleView_dark_press_background">#E6000000</color>
+
+    <!--activate-->
+    <color name="activate_title">#282828</color>
+    <color name="activate_content">#9A9A9A</color>
+    <color name="activate_jump">#157DFB</color>
+    <color name="activate_hint">#ACACAC</color>
+    <color name="activate_error">#e30912</color>
+
+    <!--NewGuide-->
+    <color name="new_guide_background">#A0000000</color>
+    <color name="guide_text_color">#E0FFFFFF</color>
+    <color name="welcome_guide_blue">#157DfB</color>
+    <color name="welcome_guide_text_white">#FFFFFF</color>
+    <color name="welcome_guide_checks_black">#282828</color>
+    <color name="onboarding_indication_line">#FFB000</color>
+    <color name="onboarding_tutorial_black">#303030</color>
+    <color name="onboarding_tutorial_indication">#727272</color>
+    <color name="onboarding_tutorial_bg_white_90">#E6FFFFFF</color>
+    <color name="onboarding_tutorial_bg_title">#E3E3E3</color>
+    <color name="onboarding_tutorial_end">#17BB37</color>
+    <color name="onboarding_tutorial_bg_title_divider">#D0D0D0</color>
+    <color name="onboarding_compass_calibration_green">#36ce5a</color>
+    <color name="onboarding_compass_calibration_red">#ff1200</color>
+    <!--Youtube-->
+    <color name="setting_divider_color">#C8C7CC</color>
+
+    <color name="ce">#cecece</color>
+    <color name="b3">#b3b3b3</color>
+    <color name="font90">#909090</color>
+    <color name="c6c6c6">#c6c6c6</color>
+    <color name="color_gray_e2">#e2e2e2</color>
+    <color name="color_72">#727272</color>
+    <color name="color_fa">#fafafa</color>
+    <color name="color_a6">#a6a6a6</color>
+    <!-- chenyuankang -->
+    <color name="flight_view_line">#8C8C8C</color>
+    <color name="flight_list_bg">#EDEDED</color>
+    <color name="flight_user_info_bg">#C4C4C4</color>
+    <color name="flight_user_info_text">#606060</color>
+    <color name="flight_user_info_unit">#828282</color>
+    <color name="flight_record_item_text">#B5B5B5</color>
+    <color name="flight_record_location_text">#515151</color>
+    <color name="flight_record_collect_blue">#157DFB</color>
+    <color name="black30">#4D000000</color>
+    <color name="white15">#26FFFFFF</color>
+    <color name="colorMFHWview">#80157dfb</color>
+    <color name="white_10">#22FFFFFF</color>
+    <color name="white_20">#50ffffff</color>
+    <color name="white_60">#A0FFFFFF</color>
+    <color name="white_80">#BBFFFFFF</color>
+
+    <color name="red_error_text">#ff1200</color>
+    <color name="bg_green_status_tips">#36ce5a</color>
+
+    <color name="gray_e5">#e5e5e5</color>
+    <color name="white_f2">#f2f2f2</color>
+    <color name="gray_ed">#ededed</color>
+    <color name="gray_9b">#9b9b9b</color>
+    <color name="white_f7">#f7f7f7</color>
+    <color name="blue_157efb">#157efb</color>
+    <color name="orange_ff7f00">#eeff7f00</color>
+    <color name="flight_record_no_fly_color_amap">#80535151</color>
+    <color name="flight_record_no_fly_color_gmap">#80a8a8a8</color>
+    <color name="flight_record_fly_color">#63C3C6</color>
+    <color name="flight_record_total_time">#b2b2b2</color>
+    <color name="flight_record_seek_bar">#00b7ff</color>
+    <color name="flight_record_btn_sync">#1dbc33</color>
+    <color name="flight_record_btn_clear">#ea0303</color>
+    <color name="flight_record_desc_gray">#a5a5a5</color>
+    <color name="find_x_star_dot_line_color">#a9aaaa</color>
+    <color name="autel_home_start_text_connect">#E62e8df7</color>
+    <color name="autel_home_start_text_connect_pressed">#4c2e8df7</color>
+
+    <!--Aircraft Fly Control Header-->
+    <color name="aircraft_camera_header_params_color">#ffffff</color>
+    <color name="black_00_alpha">#00000000</color>
+    <color name="aircraft_camera_header_params_unit_color">#99ffffff</color>
+    <color name="aircraft_camera_header_mode_color">#00ffcc</color>
+    <color name="aircraft_camera_header_divider_color">#49000000</color>
+
+    <!--Camera parameter setting-->
+    <color name="camera_mode_view_setting_item_color">#ffffff</color>
+    <color name="camera_mode_view_parameter_color">#80ffffff</color>
+    <color name="camera_mode_para_view_text_normal_color">#404041</color>
+
+    <!--Home weather status-->
+    <color name="home_weather_status_caution">#eab331</color>
+    <color name="home_weather_status_caution_pressed">#7feab331</color>
+    <color name="home_weather_status_safe">#0ce17a</color>
+    <color name="home_weather_status_safe_pressed">#7f0ce17a</color>
+    <color name="home_weather_status_not_safe">#ed2626</color>
+    <color name="home_weather_status_not_safe_pressed">#7fed2626</color>
+
+    <color name="aircraft_setting_divider">#cfcfcf</color>
+    <color name="aircraft_setting_divider_v">#a7a7ab</color>
+    <color name="aircraft_setting_divider_vertical">#c9cac9</color>
+    <color name="aircraft_setting_bg">#feefeff4</color>
+    <color name="blue_67_126_236">#437eec</color>
+    <color name="aircraft_setting_title_bg">#f5f5f7</color>
+
+    <color name="visual_setting_critical">#f70909</color>
+    <color name="visual_setting_low">#fbaa1d</color>
+    <color name="gray_163_163_163">#a3a3a3</color>
+
+    <!-- Firmware Upgrade-->
+    <color name="firmware_upgrade_title_bg">#f5f5f7</color>
+    <color name="firmware_upgrade_title_diver_bg">#c4c4c7</color>
+    <color name="firmware_upgrade_size">#969696</color>
+    <color name="firmware_upgrade_progress_bar_bg">#d6d6d6</color>
+    <color name="firmware_upgrade_progress_bar_progress">#31cb39</color>
+
+    <!-- General Setting-->
+    <color name="list_selector_blue_light">#6600eaff</color>
+    <color name="list_text_blue_light">#00ffcc</color>
+    <color name="list_value_blue_light">#00eaff</color>
+
+    <!--Visual Reality-->
+    <color name="vr_text_color">#0aff22</color>
+
+    <!--intelligent flight-->
+    <color name="orbit_advanced_para_text_color">#404041</color>
+    <color name="orbit_tip_text_color">#a3a3a3</color>
+    <color name="waypoint_btn_unread_color">#4385f5</color>
+    <color name="dsp_stable_color">#3fd574</color>
+    <color name="dsp_middle_color">#ffba00</color>
+    <color name="dsp_unstable_color">#ff0a3e</color>
+    <!-- Tracking -->
+    <color name="tracking_press_color">#f1f1f1</color>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_google_signin_btn_text_light"
+    tools:context="com.autel.sdksample.VisualActivity">
+
+
+    <TextView
+        android:id="@+id/goalInfo"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:textSize="40px" />
+
+
+    <TextView
+        android:id="@+id/timeStamp"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/goalInfo"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:textSize="40px" />
+
+    <TextView
+        android:id="@+id/otherInfo"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/timeStamp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:textSize="40px" />
+
+    <TextView
+        android:id="@+id/timeCount"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/timeStamp"
+        android:layout_marginTop="35dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:textSize="40px" />
+</RelativeLayout>

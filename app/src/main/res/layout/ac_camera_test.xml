@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:paddingTop="@dimen/activity_vertical_margin">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<Button
+				android:id="@+id/button1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:onClick="takePhoto"
+				android:text="Take Photo"/>
+
+			<Button
+				android:id="@+id/button2"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button1"
+				android:onClick="stopTimelapse"
+				android:text="stop Timelapse"/>
+
+			<Button
+				android:id="@+id/button3"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button2"
+				android:onClick="startRecord"
+				android:text="start Record"/>
+
+			<Button
+				android:id="@+id/button4"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button3"
+				android:onClick="stopRecord"
+				android:text="stop Record"/>
+
+			<Button
+				android:id="@+id/button5"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button4"
+				android:onClick="takePhotoWithFocus"
+				android:text="takephotowithfocus"/>
+
+			<Button
+				android:id="@+id/button6"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button5"
+				android:onClick="formatSDCard"
+				android:text="formatsdcard"/>
+
+			<Button
+				android:id="@+id/button7"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button6"
+				android:onClick="resetCamera"
+				android:text="resetcamera"/>
+
+			<Button
+				android:id="@+id/button8"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button7"
+				android:onClick="getCameraStatus"
+				android:text="getCameraStatus"/>
+
+			<Button
+				android:id="@+id/button9"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button8"
+				android:onClick="getCameraSetting"
+				android:text="getCameraSetting"/>
+
+			<Button
+				android:id="@+id/button10"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button9"
+				android:onClick="getCameraCurrentVideoRecordTime"
+				android:text="getCameraCurrentVideoRecordTime"/>
+
+			<Button
+				android:id="@+id/button11"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button10"
+				android:onClick="getCameraFocus"
+				android:text="getCameraFocus"/>
+
+			<Button
+				android:id="@+id/button12"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button11"
+				android:onClick="getCameraZoomFactor"
+				android:text="getCameraZoomFactor"/>
+			<Button
+				android:id="@+id/button13"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button12"
+				android:onClick="setCameraZoomFactor"
+				android:text="setCameraZoomFactor 200"/>
+			<Button
+				android:id="@+id/button14"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/button13"
+				android:onClick="setCameraFocusMode"
+				android:text="setCameraFocusMode MANUAL"/>
+
+		</RelativeLayout>
+	</ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20px">
+
+        <include
+            layout="@layout/ac_base_dsp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:background="@drawable/text_background"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/setBandwidthInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="setBandwidthInfo"
+                android:textAllCaps="false" />
+
+            <Spinner
+                android:id="@+id/bandwidthList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/bandModeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:background="@drawable/text_background"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/setTransferMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="setTransferMode"
+                android:textAllCaps="false" />
+
+            <Spinner
+                android:id="@+id/transferModeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/getTransferMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="getTransferMode"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/getDeviceVersionInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="getDeviceVersionInfo"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:textAllCaps="false" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:background="@drawable/text_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="setDspInfoListener" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/setDspInfoListener"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="set" />
+
+                <Button
+                    android:id="@+id/resetDspInfoListener"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="reset" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+

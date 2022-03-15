@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mission_drop_item_height">
+
+    <TextView
+        android:id="@+id/mission_drop_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:layout_marginLeft="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:text="TextView"
+        android:textSize="@dimen/text_view_size_sp_14"
+        android:textColor="@color/orbit_advanced_para_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/mission_item_arrow"
+        android:layout_marginRight="@dimen/margin_8dp" />
+
+    <ImageView
+        android:id="@+id/mission_item_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:layout_marginRight="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:src="@mipmap/mission_drop_arrow_press"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

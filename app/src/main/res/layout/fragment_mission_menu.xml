@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/operatorLayout"
+    android:clickable="true"
+    android:orientation="horizontal">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/operatorScroll"
+        android:background="#88ffffff"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/missionOperate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/missionPrepare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="prepareMission"
+                        android:textAllCaps="false" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarPrepare"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/missionStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="startMission"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/missionPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/missionStart"
+                    android:layout_weight="1"
+                    android:text="pauseMission"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/missionResume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="resumeMission"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/missionCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="cancelMission"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/yawRestore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="yawRestore"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/getCurrentMission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="getCurrentMission"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/getMissionExecuteState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="getMissionExecuteState"
+                    android:textAllCaps="false" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="setRealTimeInfoListener" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/setRealTimeInfoListener"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="set" />
+
+                        <Button
+                            android:id="@+id/resetRealTimeInfoListener"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="reset" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/missionDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/missionOperate"
+                android:text="downloadMission"
+                android:textAllCaps="false" />
+
+            <ProgressBar
+                android:id="@+id/progressBarDownload"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@+id/missionDownload"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/layoutShowState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/mission_operator_show_bottom_bg"
+        android:paddingLeft="10dp"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:paddingRight="4dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/white"
+        android:text="HIDE"/>
+</LinearLayout>

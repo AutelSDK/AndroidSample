@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_view_size_sp_12"
+        android:text="select"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/select_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:textSize="@dimen/text_view_size_sp_12"
+        android:textColor="@color/blue"
+        android:text="8"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_view_size_sp_12"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:textColor="@color/black"
+        android:text="@string/waypoint"
+        app:layout_constraintBaseline_toBaselineOf="@+id/select_num_tv"
+        app:layout_constraintStart_toEndOf="@+id/select_num_tv" />
+
+    <FrameLayout
+        android:id="@+id/waypoint_all_select_altitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <include layout="@layout/orbit_data_set_advance_seekbar_item" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/waypoint_all_select_speed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_all_select_altitude"
+        app:layout_constraintVertical_chainStyle="spread">
+
+        <include layout="@layout/orbit_data_set_advance_seekbar_item" />
+
+    </FrameLayout>
+
+
+</android.support.constraint.ConstraintLayout>

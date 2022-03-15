@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.autel.sdkdemo.FlyControllerActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setVideoRateInfoListener"
+                    android:padding="@dimen/text_padding"
+                    android:text="VideoRateInfoListener"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="addReportBertInfoListener"
+                    android:padding="@dimen/text_padding"
+                    android:text="addReportBertInfoListener"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="startHeartBeat"
+                    android:padding="@dimen/text_padding"
+                    android:text="FlyController HeartBeat"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="addLedLampListener"
+                    android:padding="@dimen/text_padding"
+                    android:text="addLedLampListener"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="addCalibrateCompassListener"
+                    android:padding="@dimen/text_padding"
+                    android:text="CalibrateCompassListener"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="addArmWarningListener"
+                    android:padding="@dimen/text_padding"
+                    android:text="addArmWarningListener"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="FlyControllerStatusListener"
+                    android:padding="@dimen/text_padding"
+                    android:text="FlyControllerStatusListener"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="ATTITUDE"
+                    android:padding="@dimen/text_padding"
+                    android:text="FlyController ATTITUDE"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:onClick="FMU_RAW_GPS"
+                android:padding="@dimen/text_padding"
+                android:text="FlyController FMU_RAW_GPS"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="95dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:onClick="FMU_HEIGHRES_IMU"
+                android:padding="@dimen/text_padding"
+                android:text="FlyController FMU_HIGHRES_IMU"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="140dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:onClick="FMU_LOCAL_POSITION_NED"
+                android:padding="@dimen/text_padding"
+                android:text="FlyController FMU_LOCAL_POSITION_NED"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="185dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:onClick="FMU_BAT_DATA"
+                android:padding="@dimen/text_padding"
+                android:text="FlyController FMU_BAT_DATA"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="230dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:onClick="setGimbalAngleListener"
+                android:padding="@dimen/text_padding"
+                android:text="Gimbal Angle"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="230dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:onClick="CurrentMission"
+                android:padding="@dimen/text_padding"
+                android:text="Mission Current"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="230dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:onClick="MissionHotPoint"
+                android:padding="@dimen/text_padding"
+                android:text="MissionHotPoint"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="230dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:onClick="MissionFollowMe"
+                android:padding="@dimen/text_padding"
+                android:text="MissionFollowMe"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="230dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="openSetFmuLandingGear"
+                    android:padding="@dimen/text_padding"
+                    android:text="open setFmuLandingGear"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="closeSetFmuLandingGear"
+                    android:padding="@dimen/text_padding"
+                    android:text="close setFmuLandingGear"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:onClick="setFmuSaveParameter"
+                android:padding="@dimen/text_padding"
+                android:text="setFmuSaveParameter"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="230dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:onClick="startCalibrateCompass"
+                android:padding="@dimen/text_padding"
+                android:text="startCalibrateCompass"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="230dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="startWayPointMission"
+                    android:padding="@dimen/text_padding"
+                    android:text="start wayPointMission"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="endWayPointMission"
+                    android:padding="@dimen/text_padding"
+                    android:text="end wayPointMission"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="takeOff"
+                    android:padding="@dimen/text_padding"
+                    android:text="takeOff"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="disArm"
+                    android:padding="@dimen/text_padding"
+                    android:text="disArm"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="goHome"
+                    android:padding="@dimen/text_padding"
+                    android:text="goHome"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="land"
+                    android:padding="@dimen/text_padding"
+                    android:text="land"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setLocationPhoneToHome"
+                    android:padding="@dimen/text_padding"
+                    android:text="setLocationPhoneToHome"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setLocationDroneToHome"
+                    android:padding="@dimen/text_padding"
+                    android:text="setLocationDroneToHome"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="followMe"
+                    android:padding="@dimen/text_padding"
+                    android:text="followMe"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="MissionPause"
+                    android:padding="@dimen/text_padding"
+                    android:text="Missionpause"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="MissionResume"
+                    android:padding="@dimen/text_padding"
+                    android:text="MissionResume"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="StartOrbitMission"
+                    android:padding="@dimen/text_padding"
+                    android:text="StartOrbitMission"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="endOrbitMission"
+                    android:padding="@dimen/text_padding"
+                    android:text="endOrbitMission"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="MissionPause"
+                    android:padding="@dimen/text_padding"
+                    android:text="MissionPause"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="MissionResume"
+                    android:padding="@dimen/text_padding"
+                    android:text="MissionResume"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="MissionResume"
+                    android:padding="@dimen/text_padding"
+                    android:text="MissionResume"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="TrackingFollow"
+                    android:padding="@dimen/text_padding"
+                    android:text="TrackingFollow"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="TrackingFollowTarget"
+                    android:padding="@dimen/text_padding"
+                    android:text="TrackingFollowTarget"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setMaxHeight"
+                    android:padding="@dimen/text_padding"
+                    android:text="setMaxHeight"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="queryMaxHeight"
+                    android:padding="@dimen/text_padding"
+                    android:text="queryMaxHeight"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setCriticalBatteryWarning"
+                    android:padding="@dimen/text_padding"
+                    android:text="setCriticalBatteryWarning"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="queryLowBatteryWarning"
+                    android:padding="@dimen/text_padding"
+                    android:text="queryLowBatteryWarning"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setBeginnerMode"
+                    android:padding="@dimen/text_padding"
+                    android:text="setBeginnerMode"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setLowBatteryWarning"
+                    android:padding="@dimen/text_padding"
+                    android:text="setLowBatteryWarning"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setMaxRange"
+                    android:padding="@dimen/text_padding"
+                    android:text="setMaxRange"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="queryMaxRange"
+                    android:padding="@dimen/text_padding"
+                    android:text="queryMaxRange"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setReturnHeight"
+                    android:padding="@dimen/text_padding"
+                    android:text="setReturnHeight"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="queryReturnHeight"
+                    android:padding="@dimen/text_padding"
+                    android:text="queryReturnHeight"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setHorizontalSpeed"
+                    android:padding="@dimen/text_padding"
+                    android:text="setHorizontalSpeed"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="queryHorizontalSpeed"
+                    android:padding="@dimen/text_padding"
+                    android:text="queryHorizontalSpeed"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="queryParamsList"
+                    android:padding="@dimen/text_padding"
+                    android:text="queryParamsList"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setLedLampON"
+                    android:padding="@dimen/text_padding"
+                    android:text="setLedLampON"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setYawSenCoefficient"
+                    android:padding="@dimen/text_padding"
+                    android:text="setYawSenCoefficient"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="openFmuUsb"
+                    android:padding="@dimen/text_padding"
+                    android:text="openFmuUsb"
+                    android:visibility="visible"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="returnToLaunch"
+                    android:padding="@dimen/text_padding"
+                    android:text="returnToLaunch"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="cancelReturnToLaunch"
+                    android:padding="@dimen/text_padding"
+                    android:text="cancel returnToLaunch"
+                    android:visibility="visible"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="queryBatteryInfo"
+                    android:padding="@dimen/text_padding"
+                    android:text="queryBatteryInfo"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="setBatteryDisCharge"
+                    android:padding="@dimen/text_padding"
+                    android:text="setBatteryDisCharge"
+                    android:visibility="visible"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:onClick="queryBatteryHistory"
+                    android:padding="@dimen/text_padding"
+                    android:text="queryBatteryHistory"
+                    android:visibility="visible"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="230dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

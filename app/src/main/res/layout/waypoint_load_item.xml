@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.autel.modelb.view.aircraft.widget.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_55dp">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground">
+
+        <CheckBox
+            android:id="@+id/item_check_box"
+            style="@style/waypoint_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_8dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_toRightOf="@+id/item_check_box"
+            android:layout_marginLeft="@dimen/margin_8dp"
+            android:id="@+id/item_name_tv"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+
+    </RelativeLayout>
+
+    <!-- 以下都是侧滑菜单的内容依序排列 -->
+    <ImageButton
+        android:id="@+id/btnUnRead"
+        android:layout_width="@dimen/btn_waypoint_unread_width"
+        android:layout_height="match_parent"
+        android:background="@color/waypoint_btn_unread_color"
+        android:clickable="true"
+        android:src="@mipmap/waypoint_file_edit_icon"
+        android:textColor="@android:color/white" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="@dimen/btn_waypoint_unread_width"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:src="@mipmap/waypoint_file_delete_icon"
+        android:textColor="@android:color/white" />
+
+
+</com.autel.modelb.view.aircraft.widget.SwipeMenuLayout>

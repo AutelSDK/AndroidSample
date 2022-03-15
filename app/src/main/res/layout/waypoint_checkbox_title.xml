@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/all_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/waypoint_checkbox"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:text="@string/waypoint_checkboc_all"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:text="@string/waypoint_checkboc_title_tv"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_view_size_sp_14"
+        app:layout_constraintBaseline_toBaselineOf="@+id/all_check"
+        app:layout_constraintEnd_toStartOf="@+id/ok_btn"
+        app:layout_constraintStart_toEndOf="@+id/all_check" />
+
+    <TextView
+        android:id="@+id/ok_btn"
+        android:textSize="@dimen/text_view_size_sp_14"
+        android:textColor="@color/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:text="@string/waypoint_checkboc_ok_btn"
+        app:layout_constraintBaseline_toBaselineOf="@+id/title_tv"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>

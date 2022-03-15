@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.autel.sdk.widget.AutelCodecView
+            android:id="@+id/codeView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+        <com.autel.sdksample.evo.visual.view.IntelTrackView
+            android:id="@+id/intelTrack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/cameraStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="#cccc"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:text="CameraStatus"
+        android:layout_alignParentRight="true"
+        android:textSize="35px" />
+
+    <Switch
+        android:id="@+id/mSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/cameraStatus"
+        android:layout_margin="5dp"
+        android:minHeight="30dp"
+        android:minWidth="60dp"
+        android:layout_marginRight="5dp"
+        android:background="#cccc"
+        android:textColor="#000000"
+        android:textSize="35px" />
+
+    <Switch
+        android:id="@+id/mSwitchCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/mSwitch"
+        android:layout_margin="5dp"
+        android:background="#cccc"
+        android:minHeight="30dp"
+        android:minWidth="60dp"
+        android:textColor="#000000"
+        android:textSize="35px"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/mRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/mSwitchCamera"
+        android:layout_marginRight="5dp"
+        android:background="#cccc"
+        android:gravity="center"
+        android:minHeight="30dp"
+        android:minWidth="60dp"
+        android:text="StartRecord"
+        android:textColor="#000000"
+        android:textSize="35px" />
+
+    <TextView
+        android:id="@+id/capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/mRecording"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:minHeight="30dp"
+        android:minWidth="60dp"
+        android:text="Capture"
+        android:background="#cccc"
+        android:textColor="#000000"
+        android:textSize="35px" />
+
+    <TextView
+        android:id="@+id/openVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/capture"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:minHeight="30dp"
+        android:minWidth="60dp"
+        android:text="openVideo"
+        android:background="#cccc"
+        android:textColor="#000000"
+        android:textSize="35px" />
+
+    <TextView
+        android:id="@+id/closeVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/openVideo"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:minHeight="30dp"
+        android:minWidth="60dp"
+        android:text="closeVideo"
+        android:background="#cccc"
+        android:textColor="#000000"
+        android:textSize="35px" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/text_background"
+        android:layout_below="@+id/closeVideo"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/setTrackingFlightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="setTrackingFlightMode"
+            android:padding="@dimen/text_padding"
+            android:text="setTrackingFlightMode"
+            android:textAllCaps="false" />
+
+        <Spinner
+            android:id="@+id/trackingModeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:entries="@array/tracking_teach_mode" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/confirm"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:background="#cccc"
+        android:gravity="center"
+        android:text="confirm"
+        android:textColor="#000000"
+        android:textSize="35px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp" />
+
+    <TextView
+        android:id="@+id/stop"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:background="#cccc"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:text="stop"
+        android:textSize="35px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_toEndOf="@+id/confirm"
+        android:layout_toRightOf="@+id/confirm" />
+
+    <TextView
+        android:id="@+id/exit"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:background="#cccc"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:text="exit"
+        android:visibility="gone"
+        android:textSize="35px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_toEndOf="@+id/stop"
+        android:layout_toRightOf="@+id/stop" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/goalInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:textSize="35px" />
+
+
+        <TextView
+            android:id="@+id/timeStamp"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/goalInfo"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:textSize="35px" />
+
+
+        <TextView
+            android:id="@+id/timeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/timeStamp"
+            android:textColor="#000000"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:textSize="35px" />
+
+        <TextView
+            android:id="@+id/identityResult"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/timeCount"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="35px" />
+
+        <TextView
+            android:id="@+id/signstrength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/identityResult"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="图传信号强度"
+            android:textColor="@android:color/white"
+            android:textSize="35px" />
+        <TextView
+            android:id="@+id/videoRateInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/signstrength"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="帧率信息"
+            android:textColor="@android:color/white"
+            android:textSize="35px" />
+        <TextView
+            android:id="@+id/ReportBandwidthInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/videoRateInfo"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="带宽信息"
+            android:textColor="@android:color/white"
+            android:textSize="35px" />
+        <TextView
+            android:id="@+id/otherInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ReportBandwidthInfo"
+            android:background="@color/transparent"
+            android:gravity="left|center"
+            android:text="注：上面红色文字代表视频数据快 绿色代表追踪数据快 \n 红色框表示追踪失败 绿色框代表追踪正常 \n 0：Person 1：Rider 2：Car  3：Large Vehicle 4：Boat \n5：Bike/Motorcycle 6:Quadricycle 7:Animal 8:UAV 9:Other"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20px"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progress_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#88888888"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner"
+            android:layout_centerHorizontal="true"
+            android:text="Identifying tapped region..."
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/confirmation_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Does the blue box outline the object you want to track?"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/yes_button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:layout_centerInParent="true"
+            android:text="Go"
+            android:textSize="40sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

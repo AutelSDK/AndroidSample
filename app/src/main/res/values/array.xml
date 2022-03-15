@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="missions">
+        <item>@string/mission_waypoint</item>
+        <item>@string/mission_orbit</item>
+        <item>@string/mission_follow</item>
+    </string-array>
+    <string-array name="mission_finish_action">
+        <item>@string/mission_finish_hover</item>
+        <item>@string/mission_finish_return</item>
+    </string-array>
+    <string-array name="rc_languages">
+        <item>@string/rc_language_e</item>
+        <item>@string/rc_language_c</item>
+    </string-array>
+
+    <string-array name="rc_rfs">
+        <item>@string/rc_rf_fcc</item>
+        <item>@string/rc_rf_ce</item>
+    </string-array>
+
+    <string-array name="rc_teach_mode">
+        <item>@string/rc_teach_mode_disable</item>
+        <item>@string/rc_teach_mode_teacher</item>
+        <item>@string/rc_teach_mode_student</item>
+    </string-array>
+    <string-array name="tracking_teach_mode">
+        <item>Normal</item>
+        <item>Parallel</item>
+        <item>Locked</item>
+    </string-array>
+    <string-array name="dsp_reset_factory">
+        <item>ALL</item>
+        <item>DEV_UAV</item>
+        <item>DEV_DSP</item>
+        <item>DEV_DSP_RC</item>
+        <item>DEV_RC_PLAYER</item>
+        <item>DEV_ESC_PITCH</item>
+        <item>DEV_ESC_ROLL</item>
+        <item>DEV_ESC_YAW</item>
+        <item>DEV_BATTERY</item>
+        <item>DEV_GIMBAL</item>
+        <item>DEV_RC_ANDROID</item>
+        <item>DEV_RC</item>
+        <item>DEV_MOVIDIUS_1</item>
+        <item>DEV_CAMERA</item>
+    </string-array>
+    <string-array name="rc_length_unit">
+        <item>@string/rc_length_unit_metric</item>
+        <item>@string/rc_length_unit_imperial</item>
+        <item>@string/rc_length_unit_metric_km</item>
+    </string-array>
+
+    <string-array name="rc_command_stick">
+        <item>@string/rc_command_stick_usa</item>
+        <item>@string/rc_command_stick_china</item>
+        <item>@string/rc_command_stick_japan</item>
+    </string-array>
+
+    <string-array name="rc_led_pilot_lamp">
+        <item>@string/fc_led_pilot_lamp_all_off</item>
+        <item>@string/fc_led_pilot_lamp_back_only</item>
+        <item>@string/fc_led_pilot_lamp_front_only</item>
+        <item>@string/fc_led_pilot_lamp_all_on</item>
+    </string-array>
+
+    <string-array name="rtk_coordinate_type">
+        <item>WGS84</item>
+        <item>CGCS2000</item>
+    </string-array>
+
+    <string-array name="camera_color_type">
+        <item>@string/camera_color_none</item>
+        <item>@string/camera_color_vivid</item>
+        <item>@string/camera_color_black_white</item>
+        <item>@string/camera_color_art</item>
+        <item>@string/camera_color_file</item>
+        <item>@string/camera_color_beach</item>
+        <item>@string/camera_color_dream</item>
+        <item>@string/camera_color_classic</item>
+        <item>@string/camera_color_log</item>
+        <item>@string/camera_color_nostalgic</item>
+    </string-array>
+
+    <string-array name="camera_media_modes">
+        <item>@string/camera_media_mode_single</item>
+        <item>@string/camera_media_mode_video</item>
+        <item>@string/camera_media_mode_timelapse</item>
+        <item>@string/camera_media_mode_burst</item>
+        <item>@string/camera_media_mode_aeb</item>
+    </string-array>
+    <string-array name="camera_exposure_modes">
+        <item>@string/camera_exposure_mode_auto</item>
+        <item>@string/camera_exposure_mode_manual</item>
+    </string-array>
+
+    <string-array name="camera_display_modes">
+        <item>@string/camera_display_mode_normal</item>
+        <item>@string/camera_display_mode_ir</item>
+        <item>@string/camera_display_mode_pip</item>
+    </string-array>
+    <string-array name="camera_pattern_modes">
+        <item>@string/camera_pattern_manual</item>
+        <item>@string/camera_pattern_waypoint</item>
+        <item>@string/camera_pattern_timelapse</item>
+    </string-array>
+</resources>

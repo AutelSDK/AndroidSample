@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/avoid_img_1"
+        android:layout_marginTop="200px"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/avoid_drawable_one"
+        />
+
+    <ImageView
+        android:id="@+id/avoid_img_2"
+        android:layout_marginTop="200px"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/avoid_drawable_two"
+        />
+
+    <ImageView
+        android:id="@+id/avoid_img_3"
+        android:layout_marginTop="200px"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/avoid_drawable_three"
+        />
+
+    <ImageView
+        android:id="@+id/avoid_img_4"
+        android:layout_marginTop="200px"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/avoid_drawable_four"
+        />
+
+</merge>

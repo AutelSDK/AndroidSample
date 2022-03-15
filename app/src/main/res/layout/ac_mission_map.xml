@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".base.mission.MapActivity">
+
+    <TextView
+        android:id="@+id/missionInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:layout_toLeftOf="@+id/missionTypeLayout" />
+
+    <TextView
+        android:id="@+id/flyModeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/missionInfo"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/missionTypeLayout" />
+
+    <LinearLayout
+        android:id="@+id/missionTypeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="#ddffffff"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/mission_select_type" />
+
+        <Spinner
+            android:id="@+id/missionTypeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:entries="@array/missions" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/mission_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        />
+
+    <FrameLayout
+        android:id="@+id/mission_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/missionTypeLayout"
+        android:layout_above="@+id/flyInfoSwitch"
+        android:background="#ffffffff" />
+
+    <TextView
+        android:id="@+id/logInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/mission_item_content" />
+
+
+    <Switch
+        android:id="@+id/flyInfoSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
+        android:background="#888888"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:text="fly info" />
+
+    <TextView
+        android:id="@+id/flyControllerInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="#aabbee"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".RCActivity">
+
+    <TextView
+        android:id="@+id/camera_log_output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_margin="5dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20px">
+
+            <include
+                android:id="@+id/basecameraLayout"
+                layout="@layout/ac_camera_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/getDisplayMode"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getDisplayMode" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="setDisplayMode" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/setDisplayModeNORMAL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="NORMAL" />
+
+                    <TextView
+                        android:id="@+id/setDisplayModePICTURE_IN_PICTURE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="PICTURE_IN_PICTURE" />
+
+                    <TextView
+                        android:id="@+id/setDisplayModeIR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="IR" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/getIRColorMode"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getIRColorMode" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="setIRColorMode" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/setIRColorModeHOT_METAL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="HOT_METAL" />
+
+                    <TextView
+                        android:id="@+id/setIRColorModeWHITE_HOT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="WHITE_HOT" />
+
+                    <TextView
+                        android:id="@+id/setIRColorModeRAINBOW"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="RAINBOW" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/getIRMSX"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getIRMSX" />
+
+            <TextView
+                android:id="@+id/setIRMSX"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setIRMSX" />
+
+            <TextView
+                android:id="@+id/setRecordingFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setRecordingFormat" />
+
+            <TextView
+                android:id="@+id/getRecordingFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getRecordingFormat" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/setPhotoFormat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100px"
+                    android:background="@drawable/text_background"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="setPhotoFormat" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/setPhotoFormatRJPG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="RJPG" />
+
+                    <TextView
+                        android:id="@+id/setPhotoFormatRJPEG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="RJPEG" />
+
+                    <TextView
+                        android:id="@+id/setPhotoFormatJPG_TIFF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:padding="@dimen/text_padding"
+                        android:text="JPG_TIFF" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/getPhotoFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getPhotoFormat" />
+
+            <TextView
+                android:id="@+id/getRadiometrySettings"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getRadiometrySettings" />
+
+            <TextView
+                android:id="@+id/setRadiometrySettings"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setRadiometrySettings" />
+            <TextView
+                android:id="@+id/setPipPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="setPipPosition" />
+
+            <TextView
+                android:id="@+id/getPipPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getPipPosition" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
