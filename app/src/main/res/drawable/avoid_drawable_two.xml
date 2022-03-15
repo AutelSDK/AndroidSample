@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/transparent"/>
+    <item android:drawable="@mipmap/avoid_img_2_1" android:maxLevel="1" android:minLevel="1"/>
+    <item android:drawable="@mipmap/avoid_img_2_2" android:maxLevel="2" android:minLevel="2"/>
+    <item android:drawable="@mipmap/avoid_img_2_3" android:maxLevel="3" android:minLevel="3"/>
+    <item android:drawable="@mipmap/avoid_img_2_4" android:maxLevel="4" android:minLevel="4"/>
+    <item android:drawable="@mipmap/avoid_img_2_5" android:maxLevel="5" android:minLevel="5"/>
+    <item android:drawable="@mipmap/avoid_img_2_6" android:maxLevel="6" android:minLevel="6"/>
+    <item android:drawable="@mipmap/avoid_img_2_7" android:maxLevel="7" android:minLevel="7"/>
+</level-list>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20px">
+
+        <include
+            layout="@layout/ac_base_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/getHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="getHistory"
+            android:textAllCaps="false"
+
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/getCells"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="getCells"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/getVoltage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="getVoltage"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/getCapacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="getCapacity"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/getCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="getCurrent"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/getTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="getTemperature"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/getRemainingPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="getRemainingPercent"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/getDesignCapacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="getDesignCapacity"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</ScrollView>
+
+

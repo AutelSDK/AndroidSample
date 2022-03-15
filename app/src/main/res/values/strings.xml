@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">SDKDemo</string>
+
+    <string name="product_not_connect">device not connected</string>
+    <string name="product_connect">enter the device</string>
+    <string name="product_connect_exception">the device connect failed, please try again</string>
+
+    <!--  mission controller -->
+    <string name="mission_to_waypoint">generate waypoint mission</string>
+    <string name="mission_download">download mission</string>
+    <string name="mission_prepare">prepare</string>
+    <string name="mission_start">start</string>
+    <string name="mission_pause">pause</string>
+    <string name="mission_resume">resume</string>
+    <string name="mission_cancel">cancel</string>
+    <string name="mission_yaw_restore">yaw restore</string>
+    <string name="mission_get_current_mission">get current mission</string>
+    <string name="mission_get_execute_state">get execute state</string>
+    <string name="mission_waypoint">Waypoint</string>
+    <string name="mission_orbit">Orbit</string>
+    <string name="mission_follow">Follow</string>
+    <string name="mission_select_type">Mission type：</string>
+    <string name="mission_finish_hover">Hover</string>
+    <string name="mission_finish_return">Return</string>
+    <string name="mission_finish_action">Finish Action:</string>
+    <string name="mission_prepare_notify">mission prepared</string>
+    <string name="mission_start_notify">mission started</string>
+    <string name="mission_pause_notify">mission paused</string>
+    <string name="mission_resume_notify">mission resumed</string>
+    <string name="mission_cancel_notify">mission canceled</string>
+    <string name="mission_download_notify">mission downloaded complete</string>
+    <string name="mission_yaw_restore_notify">mission yaw restore</string>
+    <string name="mission_speed_notify">fly speed</string>
+    <string name="mission_notify_return_height">return height</string>
+    <string name="mission_hint_orbit_height">orbit height</string>
+    <string name="mission_notify_count">orbit lossPackages</string>
+    <string name="mission_notify_waypoint_height">waypoint fly height</string>
+    <string name="mission_notify_radius">orbit radius</string>
+    <string name="mission_notify_remain_degree">orbit remain degree</string>
+    <string name="mission_map_google">Google Map</string>
+    <string name="mission_map_a">AMap</string>
+    <string name="mission_alititude">Altitude</string>
+    <string name="mission_hover_time">Hover Duration</string>
+    <string name="mission_yes">Yes</string>
+
+    <string name="fc_max_height">max fly height</string>
+    <string name="fc_max_range">max fly range</string>
+    <string name="fc_return_height">fly return height</string>
+    <string name="fc_horizontal_speed">fly horizontal speed</string>
+    <string name="fc_viewpoint_speed">viewpoint speed</string>
+    <string name="fc_ascend_speed">ascend speed</string>
+    <string name="fc_descend_speed">descend speed</string>
+    <string name="fc_lat_notify">input latitude</string>
+    <string name="fc_lon_notify">input longitude</string>
+
+    <string name="rc_yaw_coefficient">yaw coefficient</string>
+
+
+    <!--  remote controller -->
+    <string name="rc_language_c">CHINESE</string>
+    <string name="rc_language_e">ENGLISH</string>
+    <string name="rc_rf_ce">CE</string>
+    <string name="rc_rf_fcc">FCC</string>
+
+
+    <string name="rc_teach_mode_disable">DISABLE</string>
+    <string name="rc_teach_mode_teacher">TEACHER</string>
+    <string name="rc_teach_mode_student">STUDENT</string>
+
+    <string name="rc_length_unit_metric">METRIC</string>
+    <string name="rc_length_unit_imperial">IMPERIAL</string>
+    <string name="rc_length_unit_metric_km">METRIC_KM_H</string>
+
+    <string name="rc_command_stick_usa">USA</string>
+    <string name="rc_command_stick_china">CHINA</string>
+    <string name="rc_command_stick_japan">JAPAN</string>
+
+
+    <!--  fly controller controller -->
+    <string name="fc_beginner_on">enabled</string>
+    <string name="fc_beginner_off">disabled</string>
+
+    <string name="fc_led_pilot_lamp_all_off">ALL_OFF</string>
+    <string name="fc_led_pilot_lamp_back_only">BACK_ONLY</string>
+    <string name="fc_led_pilot_lamp_front_only">FRONT_ONLY</string>
+    <string name="fc_led_pilot_lamp_all_on">ALL_ON</string>
+
+    <!--  camera controller controller -->
+    <string name="camera_color_none">None</string>
+    <string name="camera_color_vivid">Vivid</string>
+    <string name="camera_color_black_white">BlackAndWhite</string>
+    <string name="camera_color_art">Art</string>
+    <string name="camera_color_file">Film</string>
+    <string name="camera_color_beach">Beach</string>
+    <string name="camera_color_dream">Dream</string>
+    <string name="camera_color_classic">Classic</string>
+    <string name="camera_color_log">Log</string>
+    <string name="camera_color_nostalgic">Nostalgic</string>
+
+    <string name="camera_media_mode_single">SINGLE</string>
+    <string name="camera_media_mode_video">VIDEO</string>
+    <string name="camera_media_mode_timelapse">TIMELAPSE</string>
+    <string name="camera_media_mode_burst">BURST</string>
+    <string name="camera_media_mode_aeb">AEB</string>
+
+    <string name="camera_spot_metering_x">No.x</string>
+    <string name="camera_spot_metering_y">No.y</string>
+
+    <string name="camera_exposure_mode_auto">Auto</string>
+    <string name="camera_exposure_mode_manual">Manual</string>
+    <string name="camera_no_connect">camera not connected</string>
+
+    <!-- authority check -->
+    <string name="authority_check_start">start check authority</string>
+
+    <string name="camera_display_mode_normal">Visible Light</string>
+    <string name="camera_display_mode_ir">Infrared</string>
+    <string name="camera_display_mode_pip">Picture in Picture</string>
+    <string name="camera_pattern_manual" >Manual Flight</string>
+    <string name="camera_pattern_waypoint">Missions</string>
+    <string name="camera_pattern_timelapse">Hyperlapse</string>
+    <string name="camera_mission_summary">Notes: set up the mission mode for the camera before starting the mission, and then set up the camera and mission parameters accordingly. Otherwise, no photos will be generated in the missions.</string>
+
+</resources>

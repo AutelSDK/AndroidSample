@@ -1,0 +1,2 @@
+include ':app'
+startParameter.offline = false

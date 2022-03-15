@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/finishAction_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mission_finish_action"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:textColor="#222222"
+            />
+        <Spinner
+            android:id="@+id/finishAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/finishAction_title"
+            android:entries="@array/mission_finish_action"
+            android:layout_marginTop="5dp" />
+        <EditText
+            android:id="@+id/followReturnHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/mission_notify_return_height"
+            android:inputType="number" />
+    </LinearLayout>
+</ScrollView>

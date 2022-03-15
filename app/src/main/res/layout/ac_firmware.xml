@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".FirmwareActivity">
+
+    <TextView
+        android:id="@+id/log_output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:minHeight="@dimen/log_text_min_height" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20px">
+
+            <Button
+                android:id="@+id/getAircraftComponentVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getAircraftComponentVersion"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/getAircraftComponentSerialNumberVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getAircraftComponentSerialNumberVersion"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/getRemoteControllerVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getRemoteControllerVersion"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/getRemoteControllerSerialNumberVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:gravity="center"
+                android:padding="@dimen/text_padding"
+                android:text="getRemoteControllerSerialNumberVersion"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

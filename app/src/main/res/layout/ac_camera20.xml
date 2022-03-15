@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.autel.sdkdemo.Camera20Activity">
+
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="100px"
+       android:onClick="setAutoSnapshot"
+       android:text="setAutoSnapshot"
+       android:gravity="center"/>
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="100px"
+       android:onClick="getAutoSnapshot"
+       android:text="getAutoSnapshot"
+       android:gravity="center"/>
+   <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:onClick="CameraStatusListener"
+        android:text="CameraStatus"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:onClick="CameraEventsListener"
+        android:text="CameraEvents"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center"
+        android:onClick="addCameraUploadGoalAreaTrackListener"
+        android:text="addCameraUploadGoalAreaTrackListener" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center"
+        android:onClick="getAllSettings"
+        android:text="getAllSettings" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center"
+        android:onClick="getFocus"
+        android:text="getFocus" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center"
+        android:onClick="getCameraSystemStatus"
+        android:text="getCameraSystemStatus" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center"
+        android:onClick="getCameraDeviceInformation"
+        android:text="getCameraDeviceInformation" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center"
+        android:onClick="getSystemDateAndTime"
+        android:text="getSystemDateAndTime" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center"
+        android:onClick="getVideoEncoderConfiguration"
+        android:text="getVideoEncoderConfiguration" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center"
+        android:onClick="getVideoSourceConfiguration"
+        android:text="getVideoSourceConfiguration" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center"
+        android:onClick="getVideoSourceConfigurationOptions"
+        android:text="getVideoSourceConfigurationOptions" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center"
+        android:onClick="getPhotoTakingSettings"
+        android:text="getPhotoTakingSettings" />
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="100px"
+       android:gravity="center"
+       android:onClick="setFocusSpotArea"
+       android:text="setFocusSpotArea" />
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="100px"
+       android:gravity="center"
+       android:onClick="getFocusSpotArea"
+       android:text="getFocusSpotArea" />
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="100px"
+       android:gravity="center"
+       android:onClick="getCameraMode"
+       android:text="getCameraMode" />
+
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="100px"
+       android:gravity="center"
+       android:onClick="setFileNamingMode"
+       android:text="setFileNamingMode" />
+
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="100px"
+       android:gravity="center"
+       android:onClick="setVideoRotation"
+       android:text="setVideoRotation" />
+
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="100px"
+       android:gravity="center"
+       android:onClick="setVideoEncoderConfiguration"
+       android:text="setVideoEncoderConfiguration" />
+
+  </LinearLayout>
+ </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.autel.sdksample.TestActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/closeVideo"
+                android:background="@drawable/text_background"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/setTrackingFlightMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="setResetFactory"
+                    android:padding="@dimen/text_padding"
+                    android:text="ResetFactory"
+                    android:textAllCaps="false" />
+
+                <Spinner
+                    android:id="@+id/Spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:entries="@array/dsp_reset_factory" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ll0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll1"
+                android:layout_margin="5dp"
+                android:text="setSubtitleEnable" />
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll0"
+                android:background="@drawable/text_background"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/setTrackingFlightMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="setResetFactory"
+                    android:padding="@dimen/text_padding"
+                    android:text="setFlightDirectAngle"
+                    android:textAllCaps="false" />
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="-100~100 range"
+                    android:text="50"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/resetGimbalAngle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll2"
+
+                android:layout_margin="5dp"
+                android:text="resetGimbalAngle PITCH " />
+
+            <TextView
+                android:id="@+id/setGimbalAngleMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/resetGimbalAngle"
+                android:layout_margin="5dp"
+                android:text="setGimbalAngleMin PITCH" />
+
+            <TextView
+                android:id="@+id/setGimbalAngleMax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setGimbalAngleMin"
+                android:layout_margin="5dp"
+                android:text="setGimbalAngleMax PITCH" />
+
+            <TextView
+                android:id="@+id/setGimbalAngleRange"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/setGimbalAngleMax"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="query Gimbal Range" />
+
+            <TextView
+                android:id="@+id/getAircraftVersion"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/setGimbalAngleRange"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="getAircraftVersion" />
+
+            <TextView
+                android:id="@+id/getRemoteVersion"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_below="@+id/getAircraftVersion"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="OpenVideo/CloseVideo" />
+
+            <TextView
+                android:id="@+id/setVisual"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_below="@+id/getRemoteVersion"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="SetVisual" />
+
+            <TextView
+                android:id="@+id/queryVisual"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_below="@+id/setVisual"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="QueryVisualSetting" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/queryVisual"
+                android:layout_margin="5dp"
+                android:text="setGimbalListener" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_below="@+id/textView2"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="setGimbalAngle" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="100px"
+                android:layout_below="@+id/textView3"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="setGimbalAngleSpeed" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView4"
+                android:layout_margin="5dp"
+                android:text="addLocalCoordinateInfoListener" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:layout_margin="5dp"
+                android:text="addGPSInfoListener" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView6"
+                android:layout_margin="5dp"
+                android:text="addAttitudeInfoListener" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView7"
+                android:layout_margin="5dp"
+                android:text="ImuStatusInfo" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView8"
+                android:layout_margin="5dp"
+                android:text="setMaxRange" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView9"
+                android:layout_margin="5dp"
+                android:text="addMissionCurrentInfoListener" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView10"
+                android:layout_margin="5dp"
+                android:text="addMissionFollowMeListener" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView11"
+                android:layout_margin="5dp"
+                android:text="addMissionHotPointListener" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView12"
+                android:layout_margin="5dp"
+                android:text="setVideoRateInfoListener" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView13"
+                android:layout_margin="5dp"
+                android:text="setReportBertInfoListener" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_100dp"
+                android:layout_below="@+id/textView14"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:text="setAppVersion" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/textView15"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="wayPointMission" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/textView16"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="waypointInfo" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/textView17"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="setWaypointAction" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/textView18"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="Orbit" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/textView19"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="Cylinder" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/textView20"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="Panorama" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/textView21"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="Start Waypoint" />
+
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/textView22"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="Start Orbit" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/textView23"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="GpsFollowMe Tracking" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/textView24"
+                android:layout_margin="5dp"
+                android:gravity="left|center"
+                android:text="downWaypoint" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/textView25"
+                android:layout_margin="5dp"
+                android:background="@color/red"
+                android:gravity="left|center"
+                android:text="downloadOrbit" />
+
+            <TextView
+                android:id="@+id/setBandModeWidthInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView40"
+                android:layout_margin="5dp"
+                android:text="setBandModeWidthInfo" />
+
+            <TextView
+                android:id="@+id/setVideoTransferMode1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setBandModeWidthInfo"
+                android:layout_margin="5dp"
+                android:text="setVideoTransferMode FLUENCY" />
+
+            <TextView
+                android:id="@+id/setVideoTransferMode2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setVideoTransferMode1"
+                android:layout_margin="5dp"
+                android:text="setVideoTransferMode NORMAL" />
+
+            <TextView
+                android:id="@+id/setVideoTransferMode3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setVideoTransferMode2"
+                android:layout_margin="5dp"
+                android:text="setVideoTransferMode HIGH_DEFINITION" />
+
+            <TextView
+                android:id="@+id/getVideoTransferMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setVideoTransferMode3"
+                android:layout_margin="5dp"
+                android:text="getVideoTransferMode" />
+
+            <TextView
+                android:id="@+id/setBandModeWidthInfoListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/getVideoTransferMode"
+                android:layout_margin="5dp"
+                android:text="setBandModeWidthInfoListener" />
+
+            <Button
+                android:id="@+id/queryBatteryInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setBandModeWidthInfoListener"
+                android:text="查询电池信息" />
+
+            <Button
+                android:id="@+id/setBattery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/queryBatteryInfo"
+                android:text="设置电池置放天数" />
+
+            <Button
+                android:id="@+id/queryBatteryHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setBattery"
+                android:text="查询电池历史记录" />
+
+            <Button
+                android:id="@+id/setLowBatteryWarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/queryBatteryHistory"
+                android:text="setLowBatteryWarning" />
+
+            <Button
+                android:id="@+id/setviewpointcoor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setLowBatteryWarning"
+                android:text="setViewCoor" />
+
+            <Button
+                android:id="@+id/setResolutionAngle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setviewpointcoor"
+                android:text="setResolutionAngle" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

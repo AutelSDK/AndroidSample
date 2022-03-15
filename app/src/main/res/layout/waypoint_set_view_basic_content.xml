@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/waypoint_set_way_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:gravity="center"
+        android:text="@string/waypoint_create_choice_tip"
+        android:textColor="@color/orbit_tip_text_color"
+        android:textSize="@dimen/text_view_size_sp_12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.autel.sdksample.evo.mission.widge.MissionDropSelectView
+        android:id="@+id/waypoint_choice_drop_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:textColor="@color/orbit_tip_text_color"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_set_way_tip" />
+
+    <TextView
+        android:id="@+id/waypoint_set_cur_way_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:gravity="center"
+        android:text="@string/waypoint_create_way_aircraft_tip"
+        android:textColor="@color/orbit_tip_text_color"
+        android:textSize="@dimen/text_view_size_sp_12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_choice_drop_tv" />
+
+    <TextView
+        android:id="@+id/num_waypoint_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:text="@string/waypoint_num_title"
+        android:textColor="@color/orbit_tip_text_color"
+        android:textSize="@dimen/text_view_size_sp_12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_set_cur_way_tip" />
+
+    <TextView
+        android:id="@+id/num_waypoint_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:text="0"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_view_size_sp_12"
+        app:layout_constraintBaseline_toBaselineOf="@+id/num_waypoint_title"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/total_distance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:text="@string/waypoint_total_distance_title"
+        android:textColor="@color/orbit_tip_text_color"
+        android:textSize="@dimen/text_view_size_sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num_waypoint_title" />
+
+    <TextView
+        android:id="@+id/total_distance_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:text="0 m"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_view_size_sp_12"
+        app:layout_constraintBaseline_toBaselineOf="@+id/total_distance_title"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/avoid_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:gravity="center"
+        android:text="@string/waypoint_avoid_title"
+        android:textColor="@color/orbit_tip_text_color"
+        android:textSize="@dimen/text_view_size_sp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_distance_title" />
+
+    <com.autel.sdksample.evo.mission.widge.MissionDropSelectView
+        android:id="@+id/waypoint_avoid_drop_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avoid_title" />
+
+    <TextView
+        android:id="@+id/waypoint_finish_action_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:gravity="center"
+        android:text="@string/waypoint_finish_action_title"
+        android:textColor="@color/orbit_tip_text_color"
+        android:textSize="@dimen/text_view_size_sp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_avoid_drop_tv" />
+
+    <com.autel.sdksample.evo.mission.widge.MissionDropSelectView
+        android:id="@+id/waypoint_finish_action_drop_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_finish_action_title" />
+
+    <TextView
+        android:id="@+id/waypoint_heading_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:gravity="center"
+        android:text="@string/waypoint_heading_title"
+        android:textColor="@color/orbit_tip_text_color"
+        android:textSize="@dimen/text_view_size_sp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_finish_action_drop_tv" />
+
+
+    <com.autel.sdksample.evo.mission.widge.MissionDropSelectView
+        android:id="@+id/waypoint_heading_drop_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waypoint_heading_title" />
+
+</android.support.constraint.ConstraintLayout>
