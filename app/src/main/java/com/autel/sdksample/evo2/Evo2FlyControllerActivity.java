@@ -13,6 +13,7 @@ import com.autel.common.camera.visual.VisualWarningInfo;
 import com.autel.common.error.AutelError;
 import com.autel.common.flycontroller.MqttInfo;
 import com.autel.common.flycontroller.NtripInfo;
+import com.autel.common.flycontroller.SpecialMode;
 import com.autel.common.flycontroller.evo.EvoFlyControllerInfo;
 import com.autel.common.flycontroller.evo2.LteModelInfo;
 import com.autel.common.flycontroller.visual.AvoidanceRadarInfo;
@@ -369,6 +370,22 @@ public class Evo2FlyControllerActivity extends FlyControllerActivity {
                 @Override
                 public void onFailure(AutelError autelError) {
 
+                }
+            });
+        }
+    }
+
+    public void setLowBatterGoHome(View view) {
+        if(null != mEvoFlyController){
+            mEvoFlyController.setUavTmpParamInfo(SpecialMode.LOW_BATTERY_NOT_GO_HOME, true, new CallbackWithOneParam<Boolean>() {
+                @Override
+                public void onSuccess(Boolean aBoolean) {
+                    logOut("setUavTmpParamInfo onSuccess "+aBoolean);
+                }
+
+                @Override
+                public void onFailure(AutelError autelError) {
+                    logOut("setUavTmpParamInfo onFailure "+autelError.getDescription());
                 }
             });
         }
