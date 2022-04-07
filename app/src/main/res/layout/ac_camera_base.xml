@@ -78,6 +78,7 @@
         </LinearLayout>
     </LinearLayout>
 
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -202,6 +203,37 @@
         android:textAllCaps="false"
         android:text="getVersion" />
 
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:background="@drawable/text_background"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/setAlbumLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:text="setAlbumLocation" />
+        <Spinner
+            android:id="@+id/mediaLocationList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:entries="@array/camera_location"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/getAlbumLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/item_margin_bottom"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="getAlbumLocation" />
 
     <LinearLayout
         android:layout_width="wrap_content"

@@ -82,6 +82,10 @@
         <item>@string/camera_color_nostalgic</item>
     </string-array>
 
+    <string-array name="camera_location">
+        <item>SDCard</item>
+        <item>MMC</item>
+    </string-array>
     <string-array name="camera_media_modes">
         <item>@string/camera_media_mode_single</item>
         <item>@string/camera_media_mode_video</item>
