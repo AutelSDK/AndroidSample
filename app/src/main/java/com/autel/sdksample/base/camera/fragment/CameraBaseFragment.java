@@ -13,8 +13,13 @@ import com.autel.common.camera.base.MediaMode;
 import com.autel.common.camera.base.MediaStatus;
 import com.autel.common.camera.base.SDCardState;
 import com.autel.common.camera.base.WorkState;
+import com.autel.common.camera.media.SaveLocation;
 import com.autel.common.error.AutelError;
 import com.autel.sdk.camera.AutelBaseCamera;
+import com.autel.sdk.camera.AutelXT701;
+import com.autel.sdk.camera.AutelXT705;
+import com.autel.sdk.camera.AutelXT706;
+import com.autel.sdk.camera.AutelXT709;
 import com.autel.sdksample.R;
 import com.autel.sdksample.base.camera.CameraActivity;
 
@@ -24,8 +29,9 @@ public class CameraBaseFragment extends Fragment {
 
     AutelBaseCamera baseCamera;
 
-    private Spinner mediaModeList;
+    private Spinner mediaModeList, mediaLocationList;
     protected MediaMode mediaMode = MediaMode.SINGLE;
+    protected SaveLocation saveLocation = SaveLocation.SD_CARD;
 
     protected void initClick(View view) {
         log_output = (TextView) view.findViewById(R.id.camera_log_output);
@@ -56,6 +62,145 @@ public class CameraBaseFragment extends Fragment {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        mediaLocationList = (Spinner) view.findViewById(R.id.mediaLocationList);
+        mediaLocationList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0:
+                        saveLocation = SaveLocation.SD_CARD;
+                        break;
+                    case 1:
+                        saveLocation = SaveLocation.FLASH_CARD;
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        view.findViewById(R.id.getAlbumLocation).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (baseCamera instanceof AutelXT701) {
+                    AutelXT701 xt701 = (AutelXT701) baseCamera;
+                    xt701.getAlbumLocation(new CallbackWithOneParam<SaveLocation>() {
+                        @Override
+                        public void onSuccess(SaveLocation saveLocation) {
+                            logOut("getAlbumSaveLocation  onSuccess  "+saveLocation);
+                        }
+
+                        @Override
+                        public void onFailure(AutelError autelError) {
+                            logOut("getAlbumSaveLocation  description  " + autelError.getDescription());
+                        }
+                    });
+                } else if (baseCamera instanceof AutelXT705) {
+                    AutelXT705 xt701 = (AutelXT705) baseCamera;
+                    xt701.getAlbumLocation(new CallbackWithOneParam<SaveLocation>() {
+                        @Override
+                        public void onSuccess(SaveLocation saveLocation) {
+                            logOut("getAlbumSaveLocation  onSuccess  "+saveLocation);
+                        }
+
+                        @Override
+                        public void onFailure(AutelError autelError) {
+                            logOut("getAlbumSaveLocation  description  " + autelError.getDescription());
+                        }
+                    });
+                } else if (baseCamera instanceof AutelXT706) {
+                    AutelXT706 xt701 = (AutelXT706) baseCamera;
+                    xt701.getAlbumLocation(new CallbackWithOneParam<SaveLocation>() {
+                        @Override
+                        public void onSuccess(SaveLocation saveLocation) {
+                            logOut("getAlbumSaveLocation  onSuccess  "+saveLocation);
+                        }
+
+                        @Override
+                        public void onFailure(AutelError autelError) {
+                            logOut("getAlbumSaveLocation  description  " + autelError.getDescription());
+                        }
+                    });
+                } else if (baseCamera instanceof AutelXT709) {
+                    AutelXT709 xt701 = (AutelXT709) baseCamera;
+                    xt701.getAlbumLocation(new CallbackWithOneParam<SaveLocation>() {
+                        @Override
+                        public void onSuccess(SaveLocation saveLocation) {
+                            logOut("getAlbumSaveLocation  onSuccess  "+saveLocation);
+                        }
+
+                        @Override
+                        public void onFailure(AutelError autelError) {
+                            logOut("getAlbumSaveLocation  description  " + autelError.getDescription());
+                        }
+                    });
+                }
+
+            }
+        });
+
+        view.findViewById(R.id.setAlbumLocation).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (baseCamera instanceof AutelXT701) {
+                    AutelXT701 xt701 = (AutelXT701) baseCamera;
+                    xt701.setAlbumSaveLocation(saveLocation, new CallbackWithNoParam() {
+                        @Override
+                        public void onSuccess() {
+                            logOut("setAlbumSaveLocation  onSuccess  ");
+                        }
+
+                        @Override
+                        public void onFailure(AutelError error) {
+                            logOut("setAlbumSaveLocation  description  " + error.getDescription());
+                        }
+                    });
+                } else if (baseCamera instanceof AutelXT705) {
+                    AutelXT705 xt701 = (AutelXT705) baseCamera;
+                    xt701.setAlbumSaveLocation(saveLocation, new CallbackWithNoParam() {
+                        @Override
+                        public void onSuccess() {
+                            logOut("setAlbumSaveLocation  onSuccess  ");
+                        }
+
+                        @Override
+                        public void onFailure(AutelError error) {
+                            logOut("setAlbumSaveLocation  description  " + error.getDescription());
+                        }
+                    });
+                } else if (baseCamera instanceof AutelXT706) {
+                    AutelXT706 xt701 = (AutelXT706) baseCamera;
+                    xt701.setAlbumSaveLocation(saveLocation, new CallbackWithNoParam() {
+                        @Override
+                        public void onSuccess() {
+                            logOut("setAlbumSaveLocation  onSuccess  ");
+                        }
+
+                        @Override
+                        public void onFailure(AutelError error) {
+                            logOut("setAlbumSaveLocation  description  " + error.getDescription());
+                        }
+                    });
+                } else if (baseCamera instanceof AutelXT709) {
+                    AutelXT709 xt701 = (AutelXT709) baseCamera;
+                    xt701.setAlbumSaveLocation(saveLocation, new CallbackWithNoParam() {
+                        @Override
+                        public void onSuccess() {
+                            logOut("setAlbumSaveLocation  onSuccess  ");
+                        }
+
+                        @Override
+                        public void onFailure(AutelError error) {
+                            logOut("setAlbumSaveLocation  description  " + error.getDescription());
+                        }
+                    });
+                }
 
             }
         });
@@ -310,7 +455,7 @@ public class CameraBaseFragment extends Fragment {
                 baseCamera.setMediaStateListener(new CallbackWithTwoParams<MediaStatus, String>() {
                     @Override
                     public void onSuccess(MediaStatus state, String data) {
-                        logOut("setMediaStateListener state " + state+" data "+data);
+                        logOut("setMediaStateListener state " + state + " data " + data);
                     }
 
                     @Override

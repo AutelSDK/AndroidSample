@@ -167,6 +167,38 @@ public class AlbumActivity extends BaseActivity<AutelAlbum> {
                 });
             }
         });
+        findViewById(R.id.getMMCMedia).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mController.getFMCMedia(0, 10, new CallbackWithOneParam<List<MediaInfo>>() {
+                    @Override
+                    public void onFailure(AutelError error) {
+                        logOut("getMedia  error  " + error.getDescription());
+                    }
+
+                    @Override
+                    public void onSuccess(final List<MediaInfo> data) {
+                        ThreadUtils.runOnUiThread(new PostRunnable() {
+                            @Override
+                            protected void task() {
+                                logOut("getMedia  data  " + data.size());
+                                index = data.size();
+                                mediaItems = data;
+                                for (MediaInfo item : data) {
+                                    Log.v(TAG, "getMedia  data  " + item.getOriginalMedia() + "    " + item.getFileSize() + "   " + item.getFileTimeString() + "  SmallThumbnail  " + item.getSmallThumbnail());
+                                }
+                                mediaListAdapter.setData(data);
+                                mediaList.setAdapter(mediaListAdapter);
+                                videoResolutionFromHttpHeaderAdapter.setData(data);
+                                videoResolutionFromHttpHeaderList.setAdapter(videoResolutionFromHttpHeaderAdapter);
+                                videoList.setData(data);
+                                videoDownloadList.setAdapter(videoList);
+                            }
+                        });
+                    }
+                });
+            }
+        });
         findViewById(R.id.appendMedia).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -293,8 +325,8 @@ public class AlbumActivity extends BaseActivity<AutelAlbum> {
         findViewById(R.id.download_picture).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("tag_c","path:"+mediaItems.get(1).getOriginalMedia());
                 if (mediaItems.size() > 0) {
+                    Log.d(TAG,"AblumResponseEvent download path:"+mediaItems.get(0).getOriginalMedia());
                     mController.downloadPicture(mediaItems.get(0).getOriginalMedia(),"/sdcard/album/");
                 }
 

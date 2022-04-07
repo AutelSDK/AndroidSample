@@ -18,6 +18,15 @@
             android:padding="@dimen/text_padding"
             android:text="getMedia"
             android:textAllCaps="false" />
+        <Button
+            android:id="@+id/getMMCMedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin_bottom"
+            android:gravity="center"
+            android:padding="@dimen/text_padding"
+            android:text="getMMCMedia"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/appendMedia"
