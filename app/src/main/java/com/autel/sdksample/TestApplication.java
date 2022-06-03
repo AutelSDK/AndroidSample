@@ -37,7 +37,7 @@ public class TestApplication extends MultiDexApplication {
          * 初始化SDK，通过网络验证APPKey的有效性
          */
         Thread.setDefaultUncaughtExceptionHandler(new EHandle(Thread.getDefaultUncaughtExceptionHandler()));
-        String appKey = "<SDK license should be input>";
+        String appKey = "86963f421d415765d0d3d57af0dfe613";
         AutelSdkConfig config = new AutelSdkConfig.AutelSdkConfigBuilder()
                 .setAppKey(appKey)
                 .setPostOnUi(true)

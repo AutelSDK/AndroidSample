@@ -26,7 +26,8 @@
             android:name=".ProductActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -86,7 +87,8 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="sensorLandscape" />
 
-        <receiver android:name=".UsbBroadCastReceiver">
+        <receiver android:name=".UsbBroadCastReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.autel.sdk.action.USB_ACCESSORY_ATTACHED" />
             </intent-filter>
