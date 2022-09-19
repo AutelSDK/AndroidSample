@@ -82,7 +82,7 @@ dependencies {
     //3D地图so及jar
     implementation 'com.amap.api:3dmap:latest.integration'
     //定位功能
-    implementation 'com.amap.api:location:latest.integration'
+//    implementation 'com.amap.api:location:latest.integration'
     implementation(name:'libqxwz_release_v1.1.0',ext:'aar')
     implementation 'com.google.code.gson:gson:2.8.7'
     api 'org.greenrobot:eventbus:3.0.0'

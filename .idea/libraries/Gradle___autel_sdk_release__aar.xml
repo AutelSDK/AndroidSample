@@ -10,6 +10,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79b0aa078a41aed008510e94ae33cdac/autel-sdk-release/jars/libs/hamcrest-core-1.3-sources.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79b0aa078a41aed008510e94ae33cdac/autel-sdk-release/jars/libs/hamcrest-core-1.3-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
