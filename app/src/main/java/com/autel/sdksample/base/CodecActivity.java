@@ -1,5 +1,6 @@
 package com.autel.sdksample.base;
 
+import android.media.MediaCodec;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +16,8 @@ import com.autel.sdk.video.AutelCodec;
 import com.autel.sdk.video.AutelCodecListener;
 import com.autel.sdk.widget.AutelCodecView;
 import com.autel.sdksample.R;
+
+import java.nio.ByteBuffer;
 
 public class CodecActivity extends BaseActivity<AutelCodec> {
 
@@ -133,6 +136,12 @@ public class CodecActivity extends BaseActivity<AutelCodec> {
                             Log.d("onFrameStream"," onFrameStream size "+size);
                             if(null == videoBuffer) return;
                             logOut("isValid == " + (videoBuffer.length == size) + "\nisIFrame == " + isIFrame + "\nsize == " + size + "\npts == " + pts);
+                        }
+
+                        @Override
+                        public void onDecodedFrameStream(ByteBuffer byteBuffer, MediaCodec.BufferInfo bufferInfo, boolean b, int i, int i1, int i2) {
+                            // decoded stream data
+                            Log.d("onDecodedFrameStream","frame isIFrame == " + b +" width = "+ i +" height = "+ i1 +" stream FormatType = " + i2 );
                         }
 
                         @Override

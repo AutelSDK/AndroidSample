@@ -9,6 +9,8 @@ import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
 import com.autel.common.CallbackWithNoParam;
+import com.autel.common.CallbackWithOneParam;
+import com.autel.common.author.AuthorityState;
 import com.autel.common.error.AutelError;
 import com.autel.internal.sdk.util.AutelDirPathUtils;
 import com.autel.sdk.Autel;
@@ -42,9 +44,10 @@ public class TestApplication extends MultiDexApplication {
                 .setAppKey(appKey)
                 .setPostOnUi(true)
                 .create();
-        Autel.init(this, config, new CallbackWithNoParam() {
+
+        Autel.init(this, config, new CallbackWithOneParam<AuthorityState>() {
             @Override
-            public void onSuccess() {
+            public void onSuccess(AuthorityState authorityState) {
                 Log.v(TAG, "checkAppKeyValidate onSuccess");
             }
 
