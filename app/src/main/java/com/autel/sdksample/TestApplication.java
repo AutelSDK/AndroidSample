@@ -52,8 +52,8 @@ public class TestApplication extends MultiDexApplication {
             }
 
             @Override
-            public void onFailure(AutelError error) {
-                Log.v(TAG, "checkAppKeyValidate " + error.getDescription());
+            public void onFailure(AutelError autelError) {
+
             }
         });
         AutelConfigManager.instance().init(this);
