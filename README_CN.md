@@ -23,6 +23,12 @@ Follow the steps below to add “SDK package” to the project. (Note: this is c
 
 ### 发布日期
 
+2022.04.08
+
+### 更新说明
+
+1. 解决UDP端口抢占的问题
+
 2022.10.10
 
 ### 更新说明
