@@ -1,5 +1,7 @@
 package com.autel.sdksample.base.camera.fragment;
 
+import static com.autel.common.camera.media.PanoramicType.SPHERICAL;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -15,9 +17,15 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.autel.camera.communication.http.events.CameraMessageDisPatcher;
+import com.autel.camera.protocol.protocol20.constant.CameraConstant20;
+import com.autel.camera.protocol.protocol20.entity.PanoramicInternal;
+import com.autel.camera.protocol.protocol20.request.BaseCameraRequest;
 import com.autel.common.CallbackWithNoParam;
 import com.autel.common.CallbackWithOneParam;
+import com.autel.common.CallbackWithTwoParams;
 import com.autel.common.RangePair;
 import com.autel.common.camera.CameraProduct;
 import com.autel.common.camera.XT706.DisplayMode;
@@ -27,7 +35,9 @@ import com.autel.common.camera.XT706.XT706CameraInfo;
 import com.autel.common.camera.XT706.XT706ParameterRangeManager;
 import com.autel.common.camera.XT706.XT706StateInfo;
 import com.autel.common.camera.base.BaseStateInfo;
+import com.autel.common.camera.base.CameraPattern;
 import com.autel.common.camera.base.MediaMode;
+import com.autel.common.camera.base.MediaStatus;
 import com.autel.common.camera.base.PhotoFormat;
 import com.autel.common.camera.base.SDCardState;
 import com.autel.common.camera.media.AntiFlicker;
@@ -37,6 +47,9 @@ import com.autel.common.camera.media.ColorStyle;
 import com.autel.common.camera.media.ExposureCompensation;
 import com.autel.common.camera.media.ExposureMode;
 import com.autel.common.camera.media.FlashCardStatus;
+import com.autel.common.camera.media.PanoramicRealInfo;
+import com.autel.common.camera.media.PanoramicShootStatus;
+import com.autel.common.camera.media.PanoramicType;
 import com.autel.common.camera.media.PhotoAEBCount;
 import com.autel.common.camera.media.PhotoAspectRatio;
 import com.autel.common.camera.media.PhotoBurstCount;
@@ -55,6 +68,7 @@ import com.autel.common.camera.media.WhiteBalance;
 import com.autel.common.camera.media.WhiteBalanceType;
 import com.autel.common.camera.xb015.PIVMode;
 import com.autel.common.error.AutelError;
+import com.autel.internal.sdk.camera.BaseCameraMsgParser;
 import com.autel.sdk.camera.AutelXT706;
 import com.autel.sdk.camera.AutelXT709;
 import com.autel.sdksample.R;
@@ -68,6 +82,7 @@ import com.autel.sdksample.base.camera.fragment.adapter.ModelcAspectRatioAdapter
 import com.autel.sdksample.base.camera.fragment.adapter.ModelcColorStyleAdapter;
 import com.autel.sdksample.base.camera.fragment.adapter.ModelcExposureModeAdapter;
 import com.autel.sdksample.base.camera.fragment.adapter.PIVModeAdapter;
+import com.autel.sdksample.base.camera.fragment.adapter.PanoramicTypeeAdapter;
 import com.autel.sdksample.base.camera.fragment.adapter.PhotoAEBCountAdapter;
 import com.autel.sdksample.base.camera.fragment.adapter.PhotoBurstAdapter;
 import com.autel.sdksample.base.camera.fragment.adapter.PhotoFormatAdapter;
@@ -80,8 +95,12 @@ import com.autel.sdksample.base.camera.fragment.adapter.VideoResolutionFpsAdapte
 import com.autel.sdksample.base.camera.fragment.adapter.VideoSnapshotTimeIntervalAdapter;
 import com.autel.sdksample.base.camera.fragment.adapter.WhiteBalanceTypeAdapter;
 import com.autel.sdksample.util.ThreadUtils;
+import com.autel.util.log.AutelLog;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 public class CameraXT709Fragment extends CameraBaseFragment {
     AutelXT709 xt706;
@@ -138,6 +157,9 @@ public class CameraXT709Fragment extends CameraBaseFragment {
     private XT706StateInfo xt706StateInfo;
     ModelcAspectRatioAdapter aspectRatioAdapter;
     Spinner aspectRatioList;
+    PanoramicType panoramicType = PanoramicType.VERTICAL;
+    private PanoramicShootStatus mStatus = PanoramicShootStatus.UNKNOWN;//全景拍照当前状态，0-停止状态，1-拍照中，2-拼接中,-1 未知状态
+    private int mergePhotoProgress;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -157,7 +179,7 @@ public class CameraXT709Fragment extends CameraBaseFragment {
                         ThreadUtils.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                if(null != view) {
+                                if (null != view) {
                                     initView(view);
                                     initClick(view);
                                     initXT706Click(view);
@@ -211,8 +233,170 @@ public class CameraXT709Fragment extends CameraBaseFragment {
         }
     }
 
+    public void setPanoramicMissionListener(final CallbackWithOneParam<PanoramicRealInfo> callback) {
+        if (callback == null) {
+            CameraMessageDisPatcher.instance().unRegisterReceiveListener(CameraConstant20.PanoramicMissionInfo);
+            return;
+        }
+        CameraMessageDisPatcher.instance().registerReceiveListener(CameraConstant20.PanoramicMissionInfo, new CallbackWithOneParam<PanoramicInternal>() {
+            @Override
+            public void onSuccess(PanoramicInternal data) {
+                if (null != callback) {
+                    PanoramicRealInfo info = new PanoramicRealInfo();
+                    info.setCurrentStep(data.getCurrentStep());
+                    info.setProportion(data.getProportion());
+                    info.setStatus(PanoramicShootStatus.find(data.getStatus()));
+                    info.setType(PanoramicType.find(data.getType()));
+                    info.setTotalStep(data.getTotalStep());
+                    callback.onSuccess(info);
+                }
+            }
+
+            @Override
+            public void onFailure(AutelError error) {
+                if (null != callback) {
+                    callback.onFailure(error);
+                }
+            }
+        });
+    }
 
     private void initXT706Click(final View view) {
+
+
+        baseCamera.setMediaStateListener(new CallbackWithTwoParams<MediaStatus, String>() {
+            @Override
+            public void onSuccess(MediaStatus status, String path) {
+                logOut("setMediaStateListener state " + status + " data " + path);
+                if (status == MediaStatus.PHOTO_TAKEN_DONE && mergePhotoProgress > 10) {
+                    logOut( "mediaStatus " + status + " path " + path);
+
+                }
+            }
+
+            @Override
+            public void onFailure(AutelError error) {
+                logOut("setMediaStateListener error " + error.getDescription());
+            }
+        });
+
+        setPanoramicMissionListener(new CallbackWithOneParam<PanoramicRealInfo>() {
+            @Override
+            public void onSuccess(PanoramicRealInfo info) {
+                logOut( "Panoramic mStatus=" + mStatus + " info: " + info);
+                //当收到全景拍照状态Status为拍照中或者合成中的时候，表示正在运行，不能退出当前界面
+                if (mStatus != info.getStatus()) {
+                    if (info.getStatus() == PanoramicShootStatus.STOP) {
+
+
+                    } else if (info.getStatus() == PanoramicShootStatus.SHOOTING) {
+
+                    } else if (info.getStatus() == PanoramicShootStatus.SPLICING) {
+
+                    }
+                    mStatus = info.getStatus();
+                }
+
+
+                if (info.getStatus() == PanoramicShootStatus.SHOOTING) {
+
+                } else if (info.getStatus() == PanoramicShootStatus.SPLICING) {
+                    mergePhotoProgress = (int) (info.getProportion() * 100);
+                }
+
+                if (info.getType() != panoramicType ) {
+                    logOut( "Panoramic infoType: " + info.getType());
+                }
+            }
+
+            @Override
+            public void onFailure(AutelError autelError) {
+                logOut( "setPanoramicMissionListener onFailure: " + autelError.getDescription());
+            }
+        });
+        view.findViewById(R.id.panoramicShoot).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BaseCameraRequest.instance().startPanoramicShoot(new CallbackWithNoParam() {
+                    @Override
+                    public void onSuccess() {
+                        logOut("panoramicShoot  success"  );
+                    }
+
+                    @Override
+                    public void onFailure(AutelError error) {
+                        logOut("panoramicShoot  onFailure" + error.getDescription());
+                    }
+                });
+            }
+        });
+
+        view.findViewById(R.id.stopPanoramicShoot).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BaseCameraRequest.instance().stopPanoramicShoot(new CallbackWithNoParam() {
+                    @Override
+                    public void onSuccess() {
+                        logOut("stopPanoramicShoot  success"  );
+                    }
+
+                    @Override
+                    public void onFailure(AutelError error) {
+                        logOut("stopPanoramicShoot  onFailure" + error.getDescription());
+                    }
+                });
+            }
+        });
+
+
+        view.findViewById(R.id.setPanoramicType).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BaseCameraRequest.instance().setPanoramicType(panoramicType, new CallbackWithNoParam() {
+                    @Override
+                    public void onSuccess() {
+                        logOut("setPanoramicType  success"  );
+
+                        baseCamera.setCameraPattern(CameraPattern.PANORAMIC, new CallbackWithNoParam() {
+                            @Override
+                            public void onSuccess() {
+                                logOut("setCameraPattern success");
+                            }
+
+                            @Override
+                            public void onFailure(AutelError autelError) {
+
+                                logOut("setCameraPattern onFailure");
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onFailure(AutelError error) {
+                        logOut("setPanoramicType  onFailure" + error.getDescription());
+                    }
+                });
+            }
+        });
+
+        view.findViewById(R.id.getPanoramicType).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BaseCameraRequest.instance().getPanoramicType(new CallbackWithOneParam<BaseCameraMsgParser>() {
+                    @Override
+                    public void onSuccess(BaseCameraMsgParser data) {
+                        logOut("getPanoramicType  getIntParam success "  +  data.getIntParam("Type"));
+                    }
+
+                    @Override
+                    public void onFailure(AutelError error) {
+                        logOut("getPanoramicType  onFailure " + error.getDescription());
+                    }
+                });
+            }
+        });
+
+
         view.findViewById(R.id.getSDCardInfo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -1350,7 +1534,7 @@ public class CameraXT709Fragment extends CameraBaseFragment {
             public void onClick(View v) {
                 String NoX = positionX.getText().toString();
                 String NoY = positionY.getText().toString();
-                if(TextUtils.isEmpty(NoX) || TextUtils.isEmpty(NoY)){
+                if (TextUtils.isEmpty(NoX) || TextUtils.isEmpty(NoY)) {
                     return;
                 }
                 //NoX:-10~10   NoY:-10~10
@@ -1457,6 +1641,20 @@ public class CameraXT709Fragment extends CameraBaseFragment {
     }
 
     private void initView(final View parentView) {
+
+        Spinner setPanoramicTypeList = (Spinner) parentView.findViewById(R.id.setPanoramicTypeList);
+        setPanoramicTypeList.setAdapter(new PanoramicTypeeAdapter(getContext()));
+        setPanoramicTypeList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                panoramicType = (PanoramicType) parent.getAdapter().getItem(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         Spinner autoPIVTimelapseIntervalList = (Spinner) parentView.findViewById(R.id.autoPIVTimelapseIntervalList);
         autoPIVTimelapseIntervalList.setAdapter(new VideoSnapshotTimeIntervalAdapter(getContext()));
@@ -1618,7 +1816,7 @@ public class CameraXT709Fragment extends CameraBaseFragment {
         exposureValueList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                cameraExposureCompensation = ExposureCompensation.find((String)parent.getAdapter().getItem(position));
+                cameraExposureCompensation = ExposureCompensation.find((String) parent.getAdapter().getItem(position));
             }
 
             @Override

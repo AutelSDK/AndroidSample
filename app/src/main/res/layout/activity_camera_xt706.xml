@@ -13,6 +13,57 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20px">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:background="@drawable/text_background"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/setPanoramicType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/text_padding"
+                    android:text="setPanoramicType"
+                    android:textAllCaps="false" />
+
+                <Spinner
+                    android:id="@+id/setPanoramicTypeList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/panoramicShoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:text="panoramicShoot" />
+
+            <Button
+                android:id="@+id/stopPanoramicShoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:text="stopPanoramicShoot" />
+
+            <Button
+                android:id="@+id/getPanoramicType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/item_margin_bottom"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:text="getPanoramicType" />
+
             <include
                 android:id="@+id/baseCameraLayout"
                 layout="@layout/ac_camera_base"
