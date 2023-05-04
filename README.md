@@ -24,6 +24,31 @@ Follow the steps below to add “SDK package” to the project. (Note: this is c
 ## Android MSDK Release Notes
 
 ### Release Date
+2022.05.04
+
+### Update Description
+
+1. Whitelist Addition and Issue Resolution.
+
+2022.04.25
+
+### Update Description
+
+1. Add panoramic photo shooting interface and demo
+
+2022.04.24
+
+### Update Description
+
+1. Fixed the bug of key activation and verification.
+
+2022.04.08
+
+### Update Description
+
+1. Solving the problem of UDP port conflict
+
+### Release Date
 
 2022.10.10
 
