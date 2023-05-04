@@ -426,7 +426,7 @@ public class Evo2WayPointActivity extends AppCompatActivity implements View.OnCl
 
                         @Override
                         public void onFailure(AutelError autelError) {
-                            AutelLog.d("prepareMission onFailure");
+                            AutelLog.d("prepareMission onFailure" + autelError.getDescription() + autelError.getErrCode());
                             Toast.makeText(Evo2WayPointActivity.this, "prepare failed", Toast.LENGTH_LONG).show();
 
                         }
