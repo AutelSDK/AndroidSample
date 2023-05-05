@@ -8,10 +8,9 @@ import android.os.Environment;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
-import com.autel.common.CallbackWithNoParam;
 import com.autel.common.CallbackWithOneParam;
-import com.autel.common.author.AuthorityState;
 import com.autel.common.error.AutelError;
+import com.autel.internal.autel.authorization.network.AuthorityState;
 import com.autel.internal.sdk.util.AutelDirPathUtils;
 import com.autel.sdk.Autel;
 import com.autel.sdk.AutelSdkConfig;
@@ -45,7 +44,7 @@ public class TestApplication extends MultiDexApplication {
                 .setPostOnUi(true)
                 .create();
 
-        Autel.init(this, config, new CallbackWithOneParam<AuthorityState>() {
+        Autel.init(this, config, new  CallbackWithOneParam<AuthorityState>() {
             @Override
             public void onSuccess(AuthorityState authorityState) {
                 Log.v(TAG, "checkAppKeyValidate onSuccess");
@@ -56,7 +55,7 @@ public class TestApplication extends MultiDexApplication {
 
             }
         });
-        AutelConfigManager.instance().init(this);
+        AutelConfigManager.init(this);
     }
 
     public BaseProduct getCurrentProduct() {

@@ -13,7 +13,6 @@ import com.autel.common.camera.visual.VisualWarningInfo;
 import com.autel.common.error.AutelError;
 import com.autel.common.flycontroller.MqttInfo;
 import com.autel.common.flycontroller.NtripInfo;
-import com.autel.common.flycontroller.SpecialMode;
 import com.autel.common.flycontroller.evo.EvoFlyControllerInfo;
 import com.autel.common.flycontroller.evo2.LteModelInfo;
 import com.autel.common.flycontroller.visual.AvoidanceRadarInfo;
@@ -21,7 +20,6 @@ import com.autel.common.flycontroller.visual.VisualSettingInfo;
 import com.autel.common.flycontroller.visual.VisualSettingSwitchblade;
 import com.autel.sdk.flycontroller.AutelFlyController;
 import com.autel.sdk.flycontroller.Evo2FlyController;
-import com.autel.sdk.flycontroller.rx.RxEvo2FlyController;
 import com.autel.sdk.product.BaseProduct;
 import com.autel.sdk.product.Evo2Aircraft;
 import com.autel.sdksample.R;
@@ -253,17 +251,7 @@ public class Evo2FlyControllerActivity extends FlyControllerActivity {
         int verticalValue = Integer.parseInt(leftVerValue);
         if (TextUtils.isEmpty(leftHorValue) || TextUtils.isEmpty(leftVerValue)) return;
         if (TextUtils.isEmpty(rightHorValue) || TextUtils.isEmpty(rightVerValue)) return;
-        mEvoFlyController.setRemoteControlStick(horizontalValue, verticalValue,rhorizontalValue,rverticalValue, new CallbackWithNoParam() {
-            @Override
-            public void onSuccess() {
-                logOut("setLeftControl onSuccess ");
-            }
 
-            @Override
-            public void onFailure(AutelError autelError) {
-                logOut("setLeftControl onFailure " + autelError.getDescription());
-            }
-        });
     }
 
     public void setRightControl(View view) {
@@ -273,17 +261,6 @@ public class Evo2FlyControllerActivity extends FlyControllerActivity {
         if (TextUtils.isEmpty(rightHorValue) || TextUtils.isEmpty(rightVerValue)) return;
         int horizontalValue = Integer.parseInt(rightHorValue);
         int verticalValue = Integer.parseInt(rightVerValue);
-        mEvoFlyController.setRemoteControlStick(horizontalValue, verticalValue,100,100, new CallbackWithNoParam() {
-            @Override
-            public void onSuccess() {
-                logOut("setRightControl onSuccess ");
-            }
-
-            @Override
-            public void onFailure(AutelError autelError) {
-                logOut("setRightControl onFailure " + autelError.getDescription());
-            }
-        });
     }
 
     public void setLteInfoListener(View view) {
@@ -375,19 +352,4 @@ public class Evo2FlyControllerActivity extends FlyControllerActivity {
         }
     }
 
-    public void setLowBatterGoHome(View view) {
-        if(null != mEvoFlyController){
-            mEvoFlyController.setUavTmpParamInfo(SpecialMode.LOW_BATTERY_NOT_GO_HOME, true, new CallbackWithOneParam<Boolean>() {
-                @Override
-                public void onSuccess(Boolean aBoolean) {
-                    logOut("setUavTmpParamInfo onSuccess "+aBoolean);
-                }
-
-                @Override
-                public void onFailure(AutelError autelError) {
-                    logOut("setUavTmpParamInfo onFailure "+autelError.getDescription());
-                }
-            });
-        }
-    }
 }

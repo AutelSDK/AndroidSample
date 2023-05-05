@@ -139,12 +139,6 @@ public class CodecActivity extends BaseActivity<AutelCodec> {
                         }
 
                         @Override
-                        public void onDecodedFrameStream(ByteBuffer byteBuffer, MediaCodec.BufferInfo bufferInfo, boolean b, int i, int i1, int i2) {
-                            // decoded stream data
-                            Log.d("onDecodedFrameStream","frame isIFrame == " + b +" width = "+ i +" height = "+ i1 +" stream FormatType = " + i2 );
-                        }
-
-                        @Override
                         public void onCanceled() {
 //                            logTV.post(new Runnable() {
 //                                @Override

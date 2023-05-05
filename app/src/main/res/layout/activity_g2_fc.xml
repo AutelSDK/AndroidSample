@@ -54,14 +54,7 @@
             android:onClick="setLteInfoListener"
             android:text="setLteInfoListener"
             android:textAllCaps="false" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/item_margin_bottom"
-            android:gravity="center"
-            android:onClick="setLowBatterGoHome"
-            android:text="setLowBatterGoHome"
-            android:textAllCaps="false" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -247,17 +247,6 @@ public class G2FlyControllerActivity extends FlyControllerActivity {
         if (TextUtils.isEmpty(leftHorValue) || TextUtils.isEmpty(leftVerValue)) return;
         int horizontalValue = Integer.parseInt(leftHorValue);
         int verticalValue = Integer.parseInt(leftVerValue);
-        mEvoFlyController.setRemoteControlStick(horizontalValue, verticalValue,rhorizontalValue,rverticalValue, new CallbackWithNoParam() {
-            @Override
-            public void onSuccess() {
-                logOut("setLeftControl onSuccess ");
-            }
-
-            @Override
-            public void onFailure(AutelError autelError) {
-                logOut("setLeftControl onFailure " + autelError.getDescription());
-            }
-        });
     }
 
     public void setRightControl() {
