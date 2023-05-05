@@ -19,6 +19,27 @@
     <option name="pathToUserRulesConfiguration" value="" />
     <option name="pathToJarWithRules" value="" />
   </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/ac_album.xml" value="0.36614583333333334" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/ac_camera_base.xml" value="0.36614583333333334" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/ac_mission.xml" value="0.3619791666666667" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/ac_mission_amap.xml" value="0.3619791666666667" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/ac_mission_gmap.xml" value="0.3619791666666667" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/activity_camera_xt701.xml" value="0.36614583333333334" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/activity_camera_xt706.xml" value="0.21893491124260356" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/activity_evo2.xml" value="0.3619791666666667" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/activity_evo2_waypoint.xml" value="0.3619791666666667" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/activity_g2_fc.xml" value="0.24925521350546176" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/activity_product.xml" value="0.36614583333333334" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/activity_rc.xml" value="0.19948849104859334" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/activity_test.xml" value="0.18489583333333334" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/activity_xstar_gimbal.xml" value="0.18489583333333334" />
+        <entry key="..\:/auteldevelop/AndroidSample_github/app/src/main/res/layout/oribit_execute_content.xml" value="0.18489583333333334" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FindBugsConfigurable">
     <option name="make" value="true" />
@@ -30,6 +51,4 @@
   <component name="SuppressionsComponent">
     <option name="suppComments" value="[]" />
   </component>
-
-
 </project>

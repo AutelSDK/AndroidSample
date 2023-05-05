@@ -22,6 +22,12 @@ Follow the steps below to add “SDK package” to the project. (Note: this is c
 1. Add “url https://dl.bintray.com/auteloss/android” to the application-level build.gradle file
 
 ## Android MSDK Release Notes
+### Release Date
+2022.05.05
+
+### Update Description
+
+1. Add  New Air Route Algorithm
 
 ### Release Date
 2022.05.04

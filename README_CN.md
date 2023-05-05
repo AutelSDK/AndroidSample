@@ -20,6 +20,12 @@ Follow the steps below to add “SDK package” to the project. (Note: this is c
 1. Add “url https://dl.bintray.com/auteloss/android” to the application-level build.gradle file
 
 ## Android MSDK 正式版发布记录
+### 发布日期
+2022.05.05
+
+### 更新说明
+
+1. 新航线算法支持添加
 
 ### 发布日期
 2022.05.04
