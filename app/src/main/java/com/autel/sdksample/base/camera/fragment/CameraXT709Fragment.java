@@ -314,6 +314,19 @@ public class CameraXT709Fragment extends CameraBaseFragment {
                 logOut( "setPanoramicMissionListener onFailure: " + autelError.getDescription());
             }
         });
+
+        xt706.setCameraPattern(CameraPattern.PANORAMIC, new CallbackWithNoParam() {
+            @Override
+            public void onSuccess() {
+                logOut("setCameraPattern PANORAMIC  success"  );
+            }
+
+            @Override
+            public void onFailure(AutelError error) {
+                logOut("setCameraPattern PANORAMIC  error is  " +  error);
+            }
+        });
+
         view.findViewById(R.id.panoramicShoot).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
